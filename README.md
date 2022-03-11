@@ -2,7 +2,7 @@
 # Node-Fi Developer Tools List
 A guide to available tools, components, patterns, and platforms for developing applications on EVM-compatible chains.
 
-Taken from: https://github.com/ConsenSys/ethereum-developer-tools-list
+Inspired by: https://github.com/ConsenSys/ethereum-developer-tools-list
 
 ## Table of Contents
 - [Ethereum Developer Tools List](#ethereum-developer-tools-list)
