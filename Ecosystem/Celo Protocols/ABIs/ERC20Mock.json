@@ -1,0 +1,6867 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "name": "_symbol",
+          "type": "string"
+        },
+        {
+          "name": "_decimals",
+          "type": "uint256"
+        },
+        {
+          "name": "_allocateTo",
+          "type": "address[5]"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "gas": 1088,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "gas": 1548,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_spender",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "gas": 74770,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "gas": 111125,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "gas": 37851,
+      "inputs": [
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "gas": 74756,
+      "inputs": [
+        {
+          "name": "_target",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint_for_testing",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "gas": 7598,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "gas": 6651,
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "gas": 1328,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "gas": 1573,
+      "inputs": [
+        {
+          "name": "arg0",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/ERC20Mock.vy"
+  },
+  "ast": {
+    "ast_type": "Module",
+    "body": [
+      {
+        "ast_type": "EventDef",
+        "body": [
+          {
+            "annotation": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 19,
+                  "end_col_offset": 26,
+                  "end_lineno": 7,
+                  "id": "address",
+                  "lineno": 7,
+                  "node_id": 10,
+                  "src": "93:7:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 11,
+              "end_col_offset": 27,
+              "end_lineno": 7,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 11,
+                "end_col_offset": 18,
+                "end_lineno": 7,
+                "id": "indexed",
+                "lineno": 7,
+                "node_id": 8,
+                "src": "85:7:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 7,
+              "node_id": 7,
+              "src": "85:16:0"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 27,
+            "end_lineno": 7,
+            "lineno": 7,
+            "node_id": 4,
+            "simple": 1,
+            "src": "78:23:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 9,
+              "end_lineno": 7,
+              "id": "_from",
+              "lineno": 7,
+              "node_id": 5,
+              "src": "78:5:0"
+            },
+            "value": null
+          },
+          {
+            "annotation": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 17,
+                  "end_col_offset": 24,
+                  "end_lineno": 8,
+                  "id": "address",
+                  "lineno": 8,
+                  "node_id": 18,
+                  "src": "119:7:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 9,
+              "end_col_offset": 25,
+              "end_lineno": 8,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 9,
+                "end_col_offset": 16,
+                "end_lineno": 8,
+                "id": "indexed",
+                "lineno": 8,
+                "node_id": 16,
+                "src": "111:7:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 8,
+              "node_id": 15,
+              "src": "111:16:0"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 25,
+            "end_lineno": 8,
+            "lineno": 8,
+            "node_id": 12,
+            "simple": 1,
+            "src": "106:21:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 7,
+              "end_lineno": 8,
+              "id": "_to",
+              "lineno": 8,
+              "node_id": 13,
+              "src": "106:3:0"
+            },
+            "value": null
+          },
+          {
+            "annotation": {
+              "ast_type": "Name",
+              "col_offset": 12,
+              "end_col_offset": 19,
+              "end_lineno": 9,
+              "id": "uint256",
+              "lineno": 9,
+              "node_id": 23,
+              "src": "140:7:0"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 19,
+            "end_lineno": 9,
+            "lineno": 9,
+            "node_id": 20,
+            "simple": 1,
+            "src": "132:15:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 10,
+              "end_lineno": 9,
+              "id": "_value",
+              "lineno": 9,
+              "node_id": 21,
+              "src": "132:6:0"
+            },
+            "value": null
+          }
+        ],
+        "col_offset": 0,
+        "end_col_offset": 19,
+        "end_lineno": 9,
+        "lineno": 6,
+        "name": "Transfer",
+        "node_id": 3,
+        "src": "58:89:0"
+      },
+      {
+        "ast_type": "EventDef",
+        "body": [
+          {
+            "annotation": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 20,
+                  "end_col_offset": 27,
+                  "end_lineno": 12,
+                  "id": "address",
+                  "lineno": 12,
+                  "node_id": 32,
+                  "src": "185:7:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 12,
+              "end_col_offset": 28,
+              "end_lineno": 12,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 12,
+                "end_col_offset": 19,
+                "end_lineno": 12,
+                "id": "indexed",
+                "lineno": 12,
+                "node_id": 30,
+                "src": "177:7:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 12,
+              "node_id": 29,
+              "src": "177:16:0"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 28,
+            "end_lineno": 12,
+            "lineno": 12,
+            "node_id": 26,
+            "simple": 1,
+            "src": "169:24:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 10,
+              "end_lineno": 12,
+              "id": "_owner",
+              "lineno": 12,
+              "node_id": 27,
+              "src": "169:6:0"
+            },
+            "value": null
+          },
+          {
+            "annotation": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 22,
+                  "end_col_offset": 29,
+                  "end_lineno": 13,
+                  "id": "address",
+                  "lineno": 13,
+                  "node_id": 40,
+                  "src": "216:7:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 14,
+              "end_col_offset": 30,
+              "end_lineno": 13,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 14,
+                "end_col_offset": 21,
+                "end_lineno": 13,
+                "id": "indexed",
+                "lineno": 13,
+                "node_id": 38,
+                "src": "208:7:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 13,
+              "node_id": 37,
+              "src": "208:16:0"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 30,
+            "end_lineno": 13,
+            "lineno": 13,
+            "node_id": 34,
+            "simple": 1,
+            "src": "198:26:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 12,
+              "end_lineno": 13,
+              "id": "_spender",
+              "lineno": 13,
+              "node_id": 35,
+              "src": "198:8:0"
+            },
+            "value": null
+          },
+          {
+            "annotation": {
+              "ast_type": "Name",
+              "col_offset": 12,
+              "end_col_offset": 19,
+              "end_lineno": 14,
+              "id": "uint256",
+              "lineno": 14,
+              "node_id": 45,
+              "src": "237:7:0"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 19,
+            "end_lineno": 14,
+            "lineno": 14,
+            "node_id": 42,
+            "simple": 1,
+            "src": "229:15:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 10,
+              "end_lineno": 14,
+              "id": "_value",
+              "lineno": 14,
+              "node_id": 43,
+              "src": "229:6:0"
+            },
+            "value": null
+          }
+        ],
+        "col_offset": 0,
+        "end_col_offset": 19,
+        "end_lineno": 14,
+        "lineno": 11,
+        "name": "Approval",
+        "node_id": 25,
+        "src": "149:95:0"
+      },
+      {
+        "annotation": {
+          "args": [
+            {
+              "ast_type": "Subscript",
+              "col_offset": 13,
+              "end_col_offset": 23,
+              "end_lineno": 16,
+              "lineno": 16,
+              "node_id": 53,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 20,
+                "end_col_offset": 22,
+                "end_lineno": 16,
+                "lineno": 16,
+                "node_id": 56,
+                "src": "266:2:0",
+                "value": {
+                  "ast_type": "Int",
+                  "col_offset": 20,
+                  "end_col_offset": 22,
+                  "end_lineno": 16,
+                  "lineno": 16,
+                  "node_id": 57,
+                  "src": "266:2:0",
+                  "value": 64
+                }
+              },
+              "src": "259:10:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 13,
+                "end_col_offset": 19,
+                "end_lineno": 16,
+                "id": "String",
+                "lineno": 16,
+                "node_id": 54,
+                "src": "259:6:0"
+              }
+            }
+          ],
+          "ast_type": "Call",
+          "col_offset": 6,
+          "end_col_offset": 24,
+          "end_lineno": 16,
+          "func": {
+            "ast_type": "Name",
+            "col_offset": 6,
+            "end_col_offset": 12,
+            "end_lineno": 16,
+            "id": "public",
+            "lineno": 16,
+            "node_id": 51,
+            "src": "252:6:0"
+          },
+          "keyword": null,
+          "keywords": [],
+          "lineno": 16,
+          "node_id": 50,
+          "src": "252:18:0"
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 24,
+        "end_lineno": 16,
+        "lineno": 16,
+        "node_id": 47,
+        "simple": 1,
+        "src": "246:24:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 4,
+          "end_lineno": 16,
+          "id": "name",
+          "lineno": 16,
+          "node_id": 48,
+          "src": "246:4:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "args": [
+            {
+              "ast_type": "Subscript",
+              "col_offset": 15,
+              "end_col_offset": 25,
+              "end_lineno": 17,
+              "lineno": 17,
+              "node_id": 65,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 22,
+                "end_col_offset": 24,
+                "end_lineno": 17,
+                "lineno": 17,
+                "node_id": 68,
+                "src": "293:2:0",
+                "value": {
+                  "ast_type": "Int",
+                  "col_offset": 22,
+                  "end_col_offset": 24,
+                  "end_lineno": 17,
+                  "lineno": 17,
+                  "node_id": 69,
+                  "src": "293:2:0",
+                  "value": 32
+                }
+              },
+              "src": "286:10:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 15,
+                "end_col_offset": 21,
+                "end_lineno": 17,
+                "id": "String",
+                "lineno": 17,
+                "node_id": 66,
+                "src": "286:6:0"
+              }
+            }
+          ],
+          "ast_type": "Call",
+          "col_offset": 8,
+          "end_col_offset": 26,
+          "end_lineno": 17,
+          "func": {
+            "ast_type": "Name",
+            "col_offset": 8,
+            "end_col_offset": 14,
+            "end_lineno": 17,
+            "id": "public",
+            "lineno": 17,
+            "node_id": 63,
+            "src": "279:6:0"
+          },
+          "keyword": null,
+          "keywords": [],
+          "lineno": 17,
+          "node_id": 62,
+          "src": "279:18:0"
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 26,
+        "end_lineno": 17,
+        "lineno": 17,
+        "node_id": 59,
+        "simple": 1,
+        "src": "271:26:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 6,
+          "end_lineno": 17,
+          "id": "symbol",
+          "lineno": 17,
+          "node_id": 60,
+          "src": "271:6:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "args": [
+            {
+              "ast_type": "Name",
+              "col_offset": 17,
+              "end_col_offset": 24,
+              "end_lineno": 18,
+              "id": "uint256",
+              "lineno": 18,
+              "node_id": 77,
+              "src": "315:7:0"
+            }
+          ],
+          "ast_type": "Call",
+          "col_offset": 10,
+          "end_col_offset": 25,
+          "end_lineno": 18,
+          "func": {
+            "ast_type": "Name",
+            "col_offset": 10,
+            "end_col_offset": 16,
+            "end_lineno": 18,
+            "id": "public",
+            "lineno": 18,
+            "node_id": 75,
+            "src": "308:6:0"
+          },
+          "keyword": null,
+          "keywords": [],
+          "lineno": 18,
+          "node_id": 74,
+          "src": "308:15:0"
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 25,
+        "end_lineno": 18,
+        "lineno": 18,
+        "node_id": 71,
+        "simple": 1,
+        "src": "298:25:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 8,
+          "end_lineno": 18,
+          "id": "decimals",
+          "lineno": 18,
+          "node_id": 72,
+          "src": "298:8:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "args": [
+            {
+              "ast_type": "Subscript",
+              "col_offset": 18,
+              "end_col_offset": 43,
+              "end_lineno": 19,
+              "lineno": 19,
+              "node_id": 85,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 26,
+                "end_col_offset": 42,
+                "end_lineno": 19,
+                "lineno": 19,
+                "node_id": 88,
+                "src": "350:16:0",
+                "value": {
+                  "ast_type": "Tuple",
+                  "col_offset": 26,
+                  "elements": [
+                    {
+                      "ast_type": "Name",
+                      "col_offset": 26,
+                      "end_col_offset": 33,
+                      "end_lineno": 19,
+                      "id": "address",
+                      "lineno": 19,
+                      "node_id": 90,
+                      "src": "350:7:0"
+                    },
+                    {
+                      "ast_type": "Name",
+                      "col_offset": 35,
+                      "end_col_offset": 42,
+                      "end_lineno": 19,
+                      "id": "uint256",
+                      "lineno": 19,
+                      "node_id": 92,
+                      "src": "359:7:0"
+                    }
+                  ],
+                  "end_col_offset": 42,
+                  "end_lineno": 19,
+                  "lineno": 19,
+                  "node_id": 89,
+                  "src": "350:16:0"
+                }
+              },
+              "src": "342:25:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 18,
+                "end_col_offset": 25,
+                "end_lineno": 19,
+                "id": "HashMap",
+                "lineno": 19,
+                "node_id": 86,
+                "src": "342:7:0"
+              }
+            }
+          ],
+          "ast_type": "Call",
+          "col_offset": 11,
+          "end_col_offset": 44,
+          "end_lineno": 19,
+          "func": {
+            "ast_type": "Name",
+            "col_offset": 11,
+            "end_col_offset": 17,
+            "end_lineno": 19,
+            "id": "public",
+            "lineno": 19,
+            "node_id": 83,
+            "src": "335:6:0"
+          },
+          "keyword": null,
+          "keywords": [],
+          "lineno": 19,
+          "node_id": 82,
+          "src": "335:33:0"
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 44,
+        "end_lineno": 19,
+        "lineno": 19,
+        "node_id": 79,
+        "simple": 1,
+        "src": "324:44:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 9,
+          "end_lineno": 19,
+          "id": "balanceOf",
+          "lineno": 19,
+          "node_id": 80,
+          "src": "324:9:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "ast_type": "Subscript",
+          "col_offset": 12,
+          "end_col_offset": 55,
+          "end_lineno": 20,
+          "lineno": 20,
+          "node_id": 99,
+          "slice": {
+            "ast_type": "Index",
+            "col_offset": 20,
+            "end_col_offset": 54,
+            "end_lineno": 20,
+            "lineno": 20,
+            "node_id": 102,
+            "src": "389:34:0",
+            "value": {
+              "ast_type": "Tuple",
+              "col_offset": 20,
+              "elements": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 20,
+                  "end_col_offset": 27,
+                  "end_lineno": 20,
+                  "id": "address",
+                  "lineno": 20,
+                  "node_id": 104,
+                  "src": "389:7:0"
+                },
+                {
+                  "ast_type": "Subscript",
+                  "col_offset": 29,
+                  "end_col_offset": 54,
+                  "end_lineno": 20,
+                  "lineno": 20,
+                  "node_id": 106,
+                  "slice": {
+                    "ast_type": "Index",
+                    "col_offset": 37,
+                    "end_col_offset": 53,
+                    "end_lineno": 20,
+                    "lineno": 20,
+                    "node_id": 109,
+                    "src": "406:16:0",
+                    "value": {
+                      "ast_type": "Tuple",
+                      "col_offset": 37,
+                      "elements": [
+                        {
+                          "ast_type": "Name",
+                          "col_offset": 37,
+                          "end_col_offset": 44,
+                          "end_lineno": 20,
+                          "id": "address",
+                          "lineno": 20,
+                          "node_id": 111,
+                          "src": "406:7:0"
+                        },
+                        {
+                          "ast_type": "Name",
+                          "col_offset": 46,
+                          "end_col_offset": 53,
+                          "end_lineno": 20,
+                          "id": "uint256",
+                          "lineno": 20,
+                          "node_id": 113,
+                          "src": "415:7:0"
+                        }
+                      ],
+                      "end_col_offset": 53,
+                      "end_lineno": 20,
+                      "lineno": 20,
+                      "node_id": 110,
+                      "src": "406:16:0"
+                    }
+                  },
+                  "src": "398:25:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 29,
+                    "end_col_offset": 36,
+                    "end_lineno": 20,
+                    "id": "HashMap",
+                    "lineno": 20,
+                    "node_id": 107,
+                    "src": "398:7:0"
+                  }
+                }
+              ],
+              "end_col_offset": 54,
+              "end_lineno": 20,
+              "lineno": 20,
+              "node_id": 103,
+              "src": "389:34:0"
+            }
+          },
+          "src": "381:43:0",
+          "value": {
+            "ast_type": "Name",
+            "col_offset": 12,
+            "end_col_offset": 19,
+            "end_lineno": 20,
+            "id": "HashMap",
+            "lineno": 20,
+            "node_id": 100,
+            "src": "381:7:0"
+          }
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 55,
+        "end_lineno": 20,
+        "lineno": 20,
+        "node_id": 96,
+        "simple": 1,
+        "src": "369:55:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 10,
+          "end_lineno": 20,
+          "id": "allowances",
+          "lineno": 20,
+          "node_id": 97,
+          "src": "369:10:0"
+        },
+        "value": null
+      },
+      {
+        "annotation": {
+          "ast_type": "Name",
+          "col_offset": 14,
+          "end_col_offset": 21,
+          "end_lineno": 21,
+          "id": "uint256",
+          "lineno": 21,
+          "node_id": 122,
+          "src": "439:7:0"
+        },
+        "ast_type": "AnnAssign",
+        "col_offset": 0,
+        "end_col_offset": 21,
+        "end_lineno": 21,
+        "lineno": 21,
+        "node_id": 119,
+        "simple": 1,
+        "src": "425:21:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 12,
+          "end_lineno": 21,
+          "id": "total_supply",
+          "lineno": 21,
+          "node_id": 120,
+          "src": "425:12:0"
+        },
+        "value": null
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Subscript",
+                "col_offset": 20,
+                "end_col_offset": 30,
+                "end_lineno": 25,
+                "lineno": 25,
+                "node_id": 127,
+                "slice": {
+                  "ast_type": "Index",
+                  "col_offset": 27,
+                  "end_col_offset": 29,
+                  "end_lineno": 25,
+                  "lineno": 25,
+                  "node_id": 130,
+                  "src": "486:2:0",
+                  "value": {
+                    "ast_type": "Int",
+                    "col_offset": 27,
+                    "end_col_offset": 29,
+                    "end_lineno": 25,
+                    "lineno": 25,
+                    "node_id": 131,
+                    "src": "486:2:0",
+                    "value": 64
+                  }
+                },
+                "src": "479:10:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 20,
+                  "end_col_offset": 26,
+                  "end_lineno": 25,
+                  "id": "String",
+                  "lineno": 25,
+                  "node_id": 128,
+                  "src": "479:6:0"
+                }
+              },
+              "arg": "_name",
+              "ast_type": "arg",
+              "col_offset": 13,
+              "end_col_offset": 30,
+              "end_lineno": 25,
+              "lineno": 25,
+              "node_id": 126,
+              "src": "472:17:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Subscript",
+                "col_offset": 41,
+                "end_col_offset": 51,
+                "end_lineno": 25,
+                "lineno": 25,
+                "node_id": 134,
+                "slice": {
+                  "ast_type": "Index",
+                  "col_offset": 48,
+                  "end_col_offset": 50,
+                  "end_lineno": 25,
+                  "lineno": 25,
+                  "node_id": 137,
+                  "src": "507:2:0",
+                  "value": {
+                    "ast_type": "Int",
+                    "col_offset": 48,
+                    "end_col_offset": 50,
+                    "end_lineno": 25,
+                    "lineno": 25,
+                    "node_id": 138,
+                    "src": "507:2:0",
+                    "value": 32
+                  }
+                },
+                "src": "500:10:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 41,
+                  "end_col_offset": 47,
+                  "end_lineno": 25,
+                  "id": "String",
+                  "lineno": 25,
+                  "node_id": 135,
+                  "src": "500:6:0"
+                }
+              },
+              "arg": "_symbol",
+              "ast_type": "arg",
+              "col_offset": 32,
+              "end_col_offset": 51,
+              "end_lineno": 25,
+              "lineno": 25,
+              "node_id": 133,
+              "src": "491:19:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 64,
+                "end_col_offset": 71,
+                "end_lineno": 25,
+                "id": "uint256",
+                "lineno": 25,
+                "node_id": 141,
+                "src": "523:7:0"
+              },
+              "arg": "_decimals",
+              "ast_type": "arg",
+              "col_offset": 53,
+              "end_col_offset": 71,
+              "end_lineno": 25,
+              "lineno": 25,
+              "node_id": 140,
+              "src": "512:18:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Subscript",
+                "col_offset": 86,
+                "end_col_offset": 96,
+                "end_lineno": 25,
+                "lineno": 25,
+                "node_id": 144,
+                "slice": {
+                  "ast_type": "Index",
+                  "col_offset": 94,
+                  "end_col_offset": 95,
+                  "end_lineno": 25,
+                  "lineno": 25,
+                  "node_id": 147,
+                  "src": "553:1:0",
+                  "value": {
+                    "ast_type": "Int",
+                    "col_offset": 94,
+                    "end_col_offset": 95,
+                    "end_lineno": 25,
+                    "lineno": 25,
+                    "node_id": 148,
+                    "src": "553:1:0",
+                    "value": 5
+                  }
+                },
+                "src": "545:10:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 86,
+                  "end_col_offset": 93,
+                  "end_lineno": 25,
+                  "id": "address",
+                  "lineno": 25,
+                  "node_id": 145,
+                  "src": "545:7:0"
+                }
+              },
+              "arg": "_allocateTo",
+              "ast_type": "arg",
+              "col_offset": 73,
+              "end_col_offset": 96,
+              "end_lineno": 25,
+              "lineno": 25,
+              "node_id": 143,
+              "src": "532:23:0"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 13,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 96,
+          "end_lineno": 25,
+          "lineno": 25,
+          "node_id": 125,
+          "src": "472:83:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 21,
+            "end_lineno": 26,
+            "lineno": 26,
+            "node_id": 150,
+            "src": "562:17:0",
+            "target": {
+              "ast_type": "Attribute",
+              "attr": "name",
+              "col_offset": 4,
+              "end_col_offset": 13,
+              "end_lineno": 26,
+              "lineno": 26,
+              "node_id": 151,
+              "src": "562:9:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 26,
+                "id": "self",
+                "lineno": 26,
+                "node_id": 152,
+                "src": "562:4:0"
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 16,
+              "end_col_offset": 21,
+              "end_lineno": 26,
+              "id": "_name",
+              "lineno": 26,
+              "node_id": 155,
+              "src": "574:5:0"
+            }
+          },
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 25,
+            "end_lineno": 27,
+            "lineno": 27,
+            "node_id": 157,
+            "src": "584:21:0",
+            "target": {
+              "ast_type": "Attribute",
+              "attr": "symbol",
+              "col_offset": 4,
+              "end_col_offset": 15,
+              "end_lineno": 27,
+              "lineno": 27,
+              "node_id": 158,
+              "src": "584:11:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 27,
+                "id": "self",
+                "lineno": 27,
+                "node_id": 159,
+                "src": "584:4:0"
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 18,
+              "end_col_offset": 25,
+              "end_lineno": 27,
+              "id": "_symbol",
+              "lineno": 27,
+              "node_id": 162,
+              "src": "598:7:0"
+            }
+          },
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 29,
+            "end_lineno": 28,
+            "lineno": 28,
+            "node_id": 164,
+            "src": "610:25:0",
+            "target": {
+              "ast_type": "Attribute",
+              "attr": "decimals",
+              "col_offset": 4,
+              "end_col_offset": 17,
+              "end_lineno": 28,
+              "lineno": 28,
+              "node_id": 165,
+              "src": "610:13:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 28,
+                "id": "self",
+                "lineno": 28,
+                "node_id": 166,
+                "src": "610:4:0"
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 20,
+              "end_col_offset": 29,
+              "end_lineno": 28,
+              "id": "_decimals",
+              "lineno": 28,
+              "node_id": 169,
+              "src": "626:9:0"
+            }
+          },
+          {
+            "ast_type": "For",
+            "body": [
+              {
+                "ast_type": "AugAssign",
+                "col_offset": 8,
+                "end_col_offset": 59,
+                "end_lineno": 31,
+                "lineno": 31,
+                "node_id": 176,
+                "op": {
+                  "ast_type": "Add",
+                  "col_offset": 8,
+                  "end_col_offset": 59,
+                  "end_lineno": 31,
+                  "lineno": 31,
+                  "node_id": 433,
+                  "src": "674:51:0"
+                },
+                "src": "674:51:0",
+                "target": {
+                  "ast_type": "Subscript",
+                  "col_offset": 8,
+                  "end_col_offset": 28,
+                  "end_lineno": 31,
+                  "lineno": 31,
+                  "node_id": 177,
+                  "slice": {
+                    "ast_type": "Index",
+                    "col_offset": 23,
+                    "end_col_offset": 27,
+                    "end_lineno": 31,
+                    "lineno": 31,
+                    "node_id": 182,
+                    "src": "689:4:0",
+                    "value": {
+                      "ast_type": "Name",
+                      "col_offset": 23,
+                      "end_col_offset": 27,
+                      "end_lineno": 31,
+                      "id": "addr",
+                      "lineno": 31,
+                      "node_id": 183,
+                      "src": "689:4:0"
+                    }
+                  },
+                  "src": "674:20:0",
+                  "value": {
+                    "ast_type": "Attribute",
+                    "attr": "balanceOf",
+                    "col_offset": 8,
+                    "end_col_offset": 22,
+                    "end_lineno": 31,
+                    "lineno": 31,
+                    "node_id": 178,
+                    "src": "674:14:0",
+                    "value": {
+                      "ast_type": "Name",
+                      "col_offset": 8,
+                      "end_col_offset": 12,
+                      "end_lineno": 31,
+                      "id": "self",
+                      "lineno": 31,
+                      "node_id": 179,
+                      "src": "674:4:0"
+                    }
+                  }
+                },
+                "value": {
+                  "ast_type": "Int",
+                  "col_offset": 32,
+                  "end_col_offset": 59,
+                  "end_lineno": 31,
+                  "lineno": 31,
+                  "node_id": 187,
+                  "src": "698:27:0",
+                  "value": 100000000000000000000000000
+                }
+              }
+            ],
+            "col_offset": 4,
+            "end_col_offset": 59,
+            "end_lineno": 31,
+            "iter": {
+              "ast_type": "Name",
+              "col_offset": 16,
+              "end_col_offset": 27,
+              "end_lineno": 30,
+              "id": "_allocateTo",
+              "lineno": 30,
+              "node_id": 174,
+              "src": "653:11:0"
+            },
+            "lineno": 30,
+            "node_id": 171,
+            "src": "641:84:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 8,
+              "end_col_offset": 12,
+              "end_lineno": 30,
+              "id": "addr",
+              "lineno": 30,
+              "node_id": 172,
+              "src": "645:4:0"
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 24,
+            "id": "external",
+            "lineno": 24,
+            "node_id": 188,
+            "src": "450:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 59,
+        "end_lineno": 31,
+        "lineno": 25,
+        "name": "__init__",
+        "node_id": 124,
+        "pos": null,
+        "returns": null,
+        "src": "459:266:0"
+      },
+      {
+        "args": {
+          "args": [],
+          "ast_type": "arguments",
+          "col_offset": 0,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 1,
+          "end_lineno": 34,
+          "lineno": 34,
+          "node_id": 191,
+          "src": "728:1:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Return",
+            "col_offset": 4,
+            "end_col_offset": 28,
+            "end_lineno": 37,
+            "lineno": 37,
+            "node_id": 192,
+            "src": "778:24:0",
+            "value": {
+              "ast_type": "Attribute",
+              "attr": "total_supply",
+              "col_offset": 11,
+              "end_col_offset": 28,
+              "end_lineno": 37,
+              "lineno": 37,
+              "node_id": 193,
+              "src": "785:17:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 11,
+                "end_col_offset": 15,
+                "end_lineno": 37,
+                "id": "self",
+                "lineno": 37,
+                "node_id": 194,
+                "src": "785:4:0"
+              }
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 34,
+            "id": "external",
+            "lineno": 34,
+            "node_id": 197,
+            "src": "729:8:0"
+          },
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 5,
+            "end_lineno": 35,
+            "id": "view",
+            "lineno": 35,
+            "node_id": 199,
+            "src": "739:4:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 28,
+        "end_lineno": 37,
+        "lineno": 36,
+        "name": "totalSupply",
+        "node_id": 190,
+        "pos": null,
+        "returns": {
+          "ast_type": "Name",
+          "col_offset": 21,
+          "end_col_offset": 28,
+          "end_lineno": 36,
+          "id": "uint256",
+          "lineno": 36,
+          "node_id": 201,
+          "src": "765:7:0"
+        },
+        "src": "744:58:0"
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 23,
+                "end_col_offset": 30,
+                "end_lineno": 42,
+                "id": "address",
+                "lineno": 42,
+                "node_id": 206,
+                "src": "844:7:0"
+              },
+              "arg": "_owner",
+              "ast_type": "arg",
+              "col_offset": 14,
+              "end_col_offset": 30,
+              "end_lineno": 42,
+              "lineno": 42,
+              "node_id": 205,
+              "src": "835:16:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 43,
+                "end_col_offset": 50,
+                "end_lineno": 42,
+                "id": "address",
+                "lineno": 42,
+                "node_id": 209,
+                "src": "864:7:0"
+              },
+              "arg": "_spender",
+              "ast_type": "arg",
+              "col_offset": 32,
+              "end_col_offset": 50,
+              "end_lineno": 42,
+              "lineno": 42,
+              "node_id": 208,
+              "src": "853:18:0"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 14,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 50,
+          "end_lineno": 42,
+          "lineno": 42,
+          "node_id": 204,
+          "src": "835:36:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Return",
+            "col_offset": 4,
+            "end_col_offset": 44,
+            "end_lineno": 43,
+            "lineno": 43,
+            "node_id": 211,
+            "src": "889:40:0",
+            "value": {
+              "ast_type": "Subscript",
+              "col_offset": 11,
+              "end_col_offset": 44,
+              "end_lineno": 43,
+              "lineno": 43,
+              "node_id": 212,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 35,
+                "end_col_offset": 43,
+                "end_lineno": 43,
+                "lineno": 43,
+                "node_id": 222,
+                "src": "920:8:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 35,
+                  "end_col_offset": 43,
+                  "end_lineno": 43,
+                  "id": "_spender",
+                  "lineno": 43,
+                  "node_id": 223,
+                  "src": "920:8:0"
+                }
+              },
+              "src": "896:33:0",
+              "value": {
+                "ast_type": "Subscript",
+                "col_offset": 11,
+                "end_col_offset": 34,
+                "end_lineno": 43,
+                "lineno": 43,
+                "node_id": 213,
+                "slice": {
+                  "ast_type": "Index",
+                  "col_offset": 27,
+                  "end_col_offset": 33,
+                  "end_lineno": 43,
+                  "lineno": 43,
+                  "node_id": 218,
+                  "src": "912:6:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 27,
+                    "end_col_offset": 33,
+                    "end_lineno": 43,
+                    "id": "_owner",
+                    "lineno": 43,
+                    "node_id": 219,
+                    "src": "912:6:0"
+                  }
+                },
+                "src": "896:23:0",
+                "value": {
+                  "ast_type": "Attribute",
+                  "attr": "allowances",
+                  "col_offset": 11,
+                  "end_col_offset": 26,
+                  "end_lineno": 43,
+                  "lineno": 43,
+                  "node_id": 214,
+                  "src": "896:15:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 11,
+                    "end_col_offset": 15,
+                    "end_lineno": 43,
+                    "id": "self",
+                    "lineno": 43,
+                    "node_id": 215,
+                    "src": "896:4:0"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 40,
+            "id": "external",
+            "lineno": 40,
+            "node_id": 226,
+            "src": "806:8:0"
+          },
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 5,
+            "end_lineno": 41,
+            "id": "view",
+            "lineno": 41,
+            "node_id": 228,
+            "src": "816:4:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 44,
+        "end_lineno": 43,
+        "lineno": 42,
+        "name": "allowance",
+        "node_id": 203,
+        "pos": null,
+        "returns": {
+          "ast_type": "Name",
+          "col_offset": 55,
+          "end_col_offset": 62,
+          "end_lineno": 42,
+          "id": "uint256",
+          "lineno": 42,
+          "node_id": 230,
+          "src": "876:7:0"
+        },
+        "src": "821:108:0"
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 19,
+                "end_col_offset": 26,
+                "end_lineno": 47,
+                "id": "address",
+                "lineno": 47,
+                "node_id": 235,
+                "src": "961:7:0"
+              },
+              "arg": "_to",
+              "ast_type": "arg",
+              "col_offset": 13,
+              "end_col_offset": 26,
+              "end_lineno": 47,
+              "lineno": 47,
+              "node_id": 234,
+              "src": "955:13:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 37,
+                "end_col_offset": 44,
+                "end_lineno": 47,
+                "id": "uint256",
+                "lineno": 47,
+                "node_id": 238,
+                "src": "979:7:0"
+              },
+              "arg": "_value",
+              "ast_type": "arg",
+              "col_offset": 28,
+              "end_col_offset": 44,
+              "end_lineno": 47,
+              "lineno": 47,
+              "node_id": 237,
+              "src": "970:16:0"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 13,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 44,
+          "end_lineno": 47,
+          "lineno": 47,
+          "node_id": 233,
+          "src": "955:31:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "AugAssign",
+            "col_offset": 4,
+            "end_col_offset": 40,
+            "end_lineno": 48,
+            "lineno": 48,
+            "node_id": 240,
+            "op": {
+              "ast_type": "Sub",
+              "col_offset": 4,
+              "end_col_offset": 40,
+              "end_lineno": 48,
+              "lineno": 48,
+              "node_id": 341,
+              "src": "1001:36:0"
+            },
+            "src": "1001:36:0",
+            "target": {
+              "ast_type": "Subscript",
+              "col_offset": 4,
+              "end_col_offset": 30,
+              "end_lineno": 48,
+              "lineno": 48,
+              "node_id": 241,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 19,
+                "end_col_offset": 29,
+                "end_lineno": 48,
+                "lineno": 48,
+                "node_id": 246,
+                "src": "1016:10:0",
+                "value": {
+                  "ast_type": "Attribute",
+                  "attr": "sender",
+                  "col_offset": 19,
+                  "end_col_offset": 29,
+                  "end_lineno": 48,
+                  "lineno": 48,
+                  "node_id": 247,
+                  "src": "1016:10:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 19,
+                    "end_col_offset": 22,
+                    "end_lineno": 48,
+                    "id": "msg",
+                    "lineno": 48,
+                    "node_id": 248,
+                    "src": "1016:3:0"
+                  }
+                }
+              },
+              "src": "1001:26:0",
+              "value": {
+                "ast_type": "Attribute",
+                "attr": "balanceOf",
+                "col_offset": 4,
+                "end_col_offset": 18,
+                "end_lineno": 48,
+                "lineno": 48,
+                "node_id": 242,
+                "src": "1001:14:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 4,
+                  "end_col_offset": 8,
+                  "end_lineno": 48,
+                  "id": "self",
+                  "lineno": 48,
+                  "node_id": 243,
+                  "src": "1001:4:0"
+                }
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 34,
+              "end_col_offset": 40,
+              "end_lineno": 48,
+              "id": "_value",
+              "lineno": 48,
+              "node_id": 253,
+              "src": "1031:6:0"
+            }
+          },
+          {
+            "ast_type": "AugAssign",
+            "col_offset": 4,
+            "end_col_offset": 33,
+            "end_lineno": 49,
+            "lineno": 49,
+            "node_id": 255,
+            "op": {
+              "ast_type": "Add",
+              "col_offset": 4,
+              "end_col_offset": 33,
+              "end_lineno": 49,
+              "lineno": 49,
+              "node_id": 433,
+              "src": "1042:29:0"
+            },
+            "src": "1042:29:0",
+            "target": {
+              "ast_type": "Subscript",
+              "col_offset": 4,
+              "end_col_offset": 23,
+              "end_lineno": 49,
+              "lineno": 49,
+              "node_id": 256,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 19,
+                "end_col_offset": 22,
+                "end_lineno": 49,
+                "lineno": 49,
+                "node_id": 261,
+                "src": "1057:3:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 19,
+                  "end_col_offset": 22,
+                  "end_lineno": 49,
+                  "id": "_to",
+                  "lineno": 49,
+                  "node_id": 262,
+                  "src": "1057:3:0"
+                }
+              },
+              "src": "1042:19:0",
+              "value": {
+                "ast_type": "Attribute",
+                "attr": "balanceOf",
+                "col_offset": 4,
+                "end_col_offset": 18,
+                "end_lineno": 49,
+                "lineno": 49,
+                "node_id": 257,
+                "src": "1042:14:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 4,
+                  "end_col_offset": 8,
+                  "end_lineno": 49,
+                  "id": "self",
+                  "lineno": 49,
+                  "node_id": 258,
+                  "src": "1042:4:0"
+                }
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 27,
+              "end_col_offset": 33,
+              "end_lineno": 49,
+              "id": "_value",
+              "lineno": 49,
+              "node_id": 266,
+              "src": "1065:6:0"
+            }
+          },
+          {
+            "ast_type": "Log",
+            "col_offset": 4,
+            "end_col_offset": 41,
+            "end_lineno": 50,
+            "lineno": 50,
+            "node_id": 269,
+            "src": "1076:37:0",
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Attribute",
+                  "attr": "sender",
+                  "col_offset": 17,
+                  "end_col_offset": 27,
+                  "end_lineno": 50,
+                  "lineno": 50,
+                  "node_id": 273,
+                  "src": "1089:10:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 17,
+                    "end_col_offset": 20,
+                    "end_lineno": 50,
+                    "id": "msg",
+                    "lineno": 50,
+                    "node_id": 274,
+                    "src": "1089:3:0"
+                  }
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 29,
+                  "end_col_offset": 32,
+                  "end_lineno": 50,
+                  "id": "_to",
+                  "lineno": 50,
+                  "node_id": 277,
+                  "src": "1101:3:0"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 34,
+                  "end_col_offset": 40,
+                  "end_lineno": 50,
+                  "id": "_value",
+                  "lineno": 50,
+                  "node_id": 279,
+                  "src": "1106:6:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 8,
+              "end_col_offset": 41,
+              "end_lineno": 50,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 8,
+                "end_col_offset": 16,
+                "end_lineno": 50,
+                "id": "Transfer",
+                "lineno": 50,
+                "node_id": 271,
+                "src": "1080:8:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 50,
+              "node_id": 270,
+              "src": "1080:33:0"
+            }
+          },
+          {
+            "ast_type": "Return",
+            "col_offset": 4,
+            "end_col_offset": 15,
+            "end_lineno": 51,
+            "lineno": 51,
+            "node_id": 281,
+            "src": "1118:11:0",
+            "value": {
+              "ast_type": "NameConstant",
+              "col_offset": 11,
+              "end_col_offset": 15,
+              "end_lineno": 51,
+              "lineno": 51,
+              "node_id": 282,
+              "src": "1125:4:0",
+              "value": true
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 46,
+            "id": "external",
+            "lineno": 46,
+            "node_id": 283,
+            "src": "933:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 15,
+        "end_lineno": 51,
+        "lineno": 47,
+        "name": "transfer",
+        "node_id": 232,
+        "pos": null,
+        "returns": {
+          "ast_type": "Name",
+          "col_offset": 49,
+          "end_col_offset": 53,
+          "end_lineno": 47,
+          "id": "bool",
+          "lineno": 47,
+          "node_id": 285,
+          "src": "991:4:0"
+        },
+        "src": "942:187:0"
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 25,
+                "end_col_offset": 32,
+                "end_lineno": 55,
+                "id": "address",
+                "lineno": 55,
+                "node_id": 290,
+                "src": "1167:7:0"
+              },
+              "arg": "_from",
+              "ast_type": "arg",
+              "col_offset": 17,
+              "end_col_offset": 32,
+              "end_lineno": 55,
+              "lineno": 55,
+              "node_id": 289,
+              "src": "1159:15:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 40,
+                "end_col_offset": 47,
+                "end_lineno": 55,
+                "id": "address",
+                "lineno": 55,
+                "node_id": 293,
+                "src": "1182:7:0"
+              },
+              "arg": "_to",
+              "ast_type": "arg",
+              "col_offset": 34,
+              "end_col_offset": 47,
+              "end_lineno": 55,
+              "lineno": 55,
+              "node_id": 292,
+              "src": "1176:13:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 58,
+                "end_col_offset": 65,
+                "end_lineno": 55,
+                "id": "uint256",
+                "lineno": 55,
+                "node_id": 296,
+                "src": "1200:7:0"
+              },
+              "arg": "_value",
+              "ast_type": "arg",
+              "col_offset": 49,
+              "end_col_offset": 65,
+              "end_lineno": 55,
+              "lineno": 55,
+              "node_id": 295,
+              "src": "1191:16:0"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 17,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 65,
+          "end_lineno": 55,
+          "lineno": 55,
+          "node_id": 288,
+          "src": "1159:48:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "AugAssign",
+            "col_offset": 4,
+            "end_col_offset": 35,
+            "end_lineno": 56,
+            "lineno": 56,
+            "node_id": 298,
+            "op": {
+              "ast_type": "Sub",
+              "col_offset": 4,
+              "end_col_offset": 35,
+              "end_lineno": 56,
+              "lineno": 56,
+              "node_id": 341,
+              "src": "1222:31:0"
+            },
+            "src": "1222:31:0",
+            "target": {
+              "ast_type": "Subscript",
+              "col_offset": 4,
+              "end_col_offset": 25,
+              "end_lineno": 56,
+              "lineno": 56,
+              "node_id": 299,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 19,
+                "end_col_offset": 24,
+                "end_lineno": 56,
+                "lineno": 56,
+                "node_id": 304,
+                "src": "1237:5:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 19,
+                  "end_col_offset": 24,
+                  "end_lineno": 56,
+                  "id": "_from",
+                  "lineno": 56,
+                  "node_id": 305,
+                  "src": "1237:5:0"
+                }
+              },
+              "src": "1222:21:0",
+              "value": {
+                "ast_type": "Attribute",
+                "attr": "balanceOf",
+                "col_offset": 4,
+                "end_col_offset": 18,
+                "end_lineno": 56,
+                "lineno": 56,
+                "node_id": 300,
+                "src": "1222:14:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 4,
+                  "end_col_offset": 8,
+                  "end_lineno": 56,
+                  "id": "self",
+                  "lineno": 56,
+                  "node_id": 301,
+                  "src": "1222:4:0"
+                }
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 29,
+              "end_col_offset": 35,
+              "end_lineno": 56,
+              "id": "_value",
+              "lineno": 56,
+              "node_id": 309,
+              "src": "1247:6:0"
+            }
+          },
+          {
+            "ast_type": "AugAssign",
+            "col_offset": 4,
+            "end_col_offset": 33,
+            "end_lineno": 57,
+            "lineno": 57,
+            "node_id": 311,
+            "op": {
+              "ast_type": "Add",
+              "col_offset": 4,
+              "end_col_offset": 33,
+              "end_lineno": 57,
+              "lineno": 57,
+              "node_id": 433,
+              "src": "1258:29:0"
+            },
+            "src": "1258:29:0",
+            "target": {
+              "ast_type": "Subscript",
+              "col_offset": 4,
+              "end_col_offset": 23,
+              "end_lineno": 57,
+              "lineno": 57,
+              "node_id": 312,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 19,
+                "end_col_offset": 22,
+                "end_lineno": 57,
+                "lineno": 57,
+                "node_id": 317,
+                "src": "1273:3:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 19,
+                  "end_col_offset": 22,
+                  "end_lineno": 57,
+                  "id": "_to",
+                  "lineno": 57,
+                  "node_id": 318,
+                  "src": "1273:3:0"
+                }
+              },
+              "src": "1258:19:0",
+              "value": {
+                "ast_type": "Attribute",
+                "attr": "balanceOf",
+                "col_offset": 4,
+                "end_col_offset": 18,
+                "end_lineno": 57,
+                "lineno": 57,
+                "node_id": 313,
+                "src": "1258:14:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 4,
+                  "end_col_offset": 8,
+                  "end_lineno": 57,
+                  "id": "self",
+                  "lineno": 57,
+                  "node_id": 314,
+                  "src": "1258:4:0"
+                }
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 27,
+              "end_col_offset": 33,
+              "end_lineno": 57,
+              "id": "_value",
+              "lineno": 57,
+              "node_id": 322,
+              "src": "1281:6:0"
+            }
+          },
+          {
+            "ast_type": "AugAssign",
+            "col_offset": 4,
+            "end_col_offset": 48,
+            "end_lineno": 58,
+            "lineno": 58,
+            "node_id": 324,
+            "op": {
+              "ast_type": "Sub",
+              "col_offset": 4,
+              "end_col_offset": 48,
+              "end_lineno": 58,
+              "lineno": 58,
+              "node_id": 341,
+              "src": "1292:44:0"
+            },
+            "src": "1292:44:0",
+            "target": {
+              "ast_type": "Subscript",
+              "col_offset": 4,
+              "end_col_offset": 38,
+              "end_lineno": 58,
+              "lineno": 58,
+              "node_id": 325,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 27,
+                "end_col_offset": 37,
+                "end_lineno": 58,
+                "lineno": 58,
+                "node_id": 335,
+                "src": "1315:10:0",
+                "value": {
+                  "ast_type": "Attribute",
+                  "attr": "sender",
+                  "col_offset": 27,
+                  "end_col_offset": 37,
+                  "end_lineno": 58,
+                  "lineno": 58,
+                  "node_id": 336,
+                  "src": "1315:10:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 27,
+                    "end_col_offset": 30,
+                    "end_lineno": 58,
+                    "id": "msg",
+                    "lineno": 58,
+                    "node_id": 337,
+                    "src": "1315:3:0"
+                  }
+                }
+              },
+              "src": "1292:34:0",
+              "value": {
+                "ast_type": "Subscript",
+                "col_offset": 4,
+                "end_col_offset": 26,
+                "end_lineno": 58,
+                "lineno": 58,
+                "node_id": 326,
+                "slice": {
+                  "ast_type": "Index",
+                  "col_offset": 20,
+                  "end_col_offset": 25,
+                  "end_lineno": 58,
+                  "lineno": 58,
+                  "node_id": 331,
+                  "src": "1308:5:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 20,
+                    "end_col_offset": 25,
+                    "end_lineno": 58,
+                    "id": "_from",
+                    "lineno": 58,
+                    "node_id": 332,
+                    "src": "1308:5:0"
+                  }
+                },
+                "src": "1292:22:0",
+                "value": {
+                  "ast_type": "Attribute",
+                  "attr": "allowances",
+                  "col_offset": 4,
+                  "end_col_offset": 19,
+                  "end_lineno": 58,
+                  "lineno": 58,
+                  "node_id": 327,
+                  "src": "1292:15:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 4,
+                    "end_col_offset": 8,
+                    "end_lineno": 58,
+                    "id": "self",
+                    "lineno": 58,
+                    "node_id": 328,
+                    "src": "1292:4:0"
+                  }
+                }
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 42,
+              "end_col_offset": 48,
+              "end_lineno": 58,
+              "id": "_value",
+              "lineno": 58,
+              "node_id": 342,
+              "src": "1330:6:0"
+            }
+          },
+          {
+            "ast_type": "Log",
+            "col_offset": 4,
+            "end_col_offset": 36,
+            "end_lineno": 59,
+            "lineno": 59,
+            "node_id": 345,
+            "src": "1341:32:0",
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 17,
+                  "end_col_offset": 22,
+                  "end_lineno": 59,
+                  "id": "_from",
+                  "lineno": 59,
+                  "node_id": 349,
+                  "src": "1354:5:0"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 24,
+                  "end_col_offset": 27,
+                  "end_lineno": 59,
+                  "id": "_to",
+                  "lineno": 59,
+                  "node_id": 351,
+                  "src": "1361:3:0"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 29,
+                  "end_col_offset": 35,
+                  "end_lineno": 59,
+                  "id": "_value",
+                  "lineno": 59,
+                  "node_id": 353,
+                  "src": "1366:6:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 8,
+              "end_col_offset": 36,
+              "end_lineno": 59,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 8,
+                "end_col_offset": 16,
+                "end_lineno": 59,
+                "id": "Transfer",
+                "lineno": 59,
+                "node_id": 347,
+                "src": "1345:8:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 59,
+              "node_id": 346,
+              "src": "1345:28:0"
+            }
+          },
+          {
+            "ast_type": "Return",
+            "col_offset": 4,
+            "end_col_offset": 15,
+            "end_lineno": 60,
+            "lineno": 60,
+            "node_id": 355,
+            "src": "1378:11:0",
+            "value": {
+              "ast_type": "NameConstant",
+              "col_offset": 11,
+              "end_col_offset": 15,
+              "end_lineno": 60,
+              "lineno": 60,
+              "node_id": 356,
+              "src": "1385:4:0",
+              "value": true
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 54,
+            "id": "external",
+            "lineno": 54,
+            "node_id": 357,
+            "src": "1133:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 15,
+        "end_lineno": 60,
+        "lineno": 55,
+        "name": "transferFrom",
+        "node_id": 287,
+        "pos": null,
+        "returns": {
+          "ast_type": "Name",
+          "col_offset": 70,
+          "end_col_offset": 74,
+          "end_lineno": 55,
+          "id": "bool",
+          "lineno": 55,
+          "node_id": 359,
+          "src": "1212:4:0"
+        },
+        "src": "1142:247:0"
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 23,
+                "end_col_offset": 30,
+                "end_lineno": 64,
+                "id": "address",
+                "lineno": 64,
+                "node_id": 364,
+                "src": "1425:7:0"
+              },
+              "arg": "_spender",
+              "ast_type": "arg",
+              "col_offset": 12,
+              "end_col_offset": 30,
+              "end_lineno": 64,
+              "lineno": 64,
+              "node_id": 363,
+              "src": "1414:18:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 41,
+                "end_col_offset": 48,
+                "end_lineno": 64,
+                "id": "uint256",
+                "lineno": 64,
+                "node_id": 367,
+                "src": "1443:7:0"
+              },
+              "arg": "_value",
+              "ast_type": "arg",
+              "col_offset": 32,
+              "end_col_offset": 48,
+              "end_lineno": 64,
+              "lineno": 64,
+              "node_id": 366,
+              "src": "1434:16:0"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 12,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 48,
+          "end_lineno": 64,
+          "lineno": 64,
+          "node_id": 362,
+          "src": "1414:36:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 50,
+            "end_lineno": 65,
+            "lineno": 65,
+            "node_id": 369,
+            "src": "1465:46:0",
+            "target": {
+              "ast_type": "Subscript",
+              "col_offset": 4,
+              "end_col_offset": 41,
+              "end_lineno": 65,
+              "lineno": 65,
+              "node_id": 370,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 32,
+                "end_col_offset": 40,
+                "end_lineno": 65,
+                "lineno": 65,
+                "node_id": 382,
+                "src": "1493:8:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 32,
+                  "end_col_offset": 40,
+                  "end_lineno": 65,
+                  "id": "_spender",
+                  "lineno": 65,
+                  "node_id": 383,
+                  "src": "1493:8:0"
+                }
+              },
+              "src": "1465:37:0",
+              "value": {
+                "ast_type": "Subscript",
+                "col_offset": 4,
+                "end_col_offset": 31,
+                "end_lineno": 65,
+                "lineno": 65,
+                "node_id": 371,
+                "slice": {
+                  "ast_type": "Index",
+                  "col_offset": 20,
+                  "end_col_offset": 30,
+                  "end_lineno": 65,
+                  "lineno": 65,
+                  "node_id": 376,
+                  "src": "1481:10:0",
+                  "value": {
+                    "ast_type": "Attribute",
+                    "attr": "sender",
+                    "col_offset": 20,
+                    "end_col_offset": 30,
+                    "end_lineno": 65,
+                    "lineno": 65,
+                    "node_id": 377,
+                    "src": "1481:10:0",
+                    "value": {
+                      "ast_type": "Name",
+                      "col_offset": 20,
+                      "end_col_offset": 23,
+                      "end_lineno": 65,
+                      "id": "msg",
+                      "lineno": 65,
+                      "node_id": 378,
+                      "src": "1481:3:0"
+                    }
+                  }
+                },
+                "src": "1465:27:0",
+                "value": {
+                  "ast_type": "Attribute",
+                  "attr": "allowances",
+                  "col_offset": 4,
+                  "end_col_offset": 19,
+                  "end_lineno": 65,
+                  "lineno": 65,
+                  "node_id": 372,
+                  "src": "1465:15:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 4,
+                    "end_col_offset": 8,
+                    "end_lineno": 65,
+                    "id": "self",
+                    "lineno": 65,
+                    "node_id": 373,
+                    "src": "1465:4:0"
+                  }
+                }
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 44,
+              "end_col_offset": 50,
+              "end_lineno": 65,
+              "id": "_value",
+              "lineno": 65,
+              "node_id": 386,
+              "src": "1505:6:0"
+            }
+          },
+          {
+            "ast_type": "Log",
+            "col_offset": 4,
+            "end_col_offset": 46,
+            "end_lineno": 66,
+            "lineno": 66,
+            "node_id": 389,
+            "src": "1516:42:0",
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Attribute",
+                  "attr": "sender",
+                  "col_offset": 17,
+                  "end_col_offset": 27,
+                  "end_lineno": 66,
+                  "lineno": 66,
+                  "node_id": 393,
+                  "src": "1529:10:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 17,
+                    "end_col_offset": 20,
+                    "end_lineno": 66,
+                    "id": "msg",
+                    "lineno": 66,
+                    "node_id": 394,
+                    "src": "1529:3:0"
+                  }
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 29,
+                  "end_col_offset": 37,
+                  "end_lineno": 66,
+                  "id": "_spender",
+                  "lineno": 66,
+                  "node_id": 397,
+                  "src": "1541:8:0"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 39,
+                  "end_col_offset": 45,
+                  "end_lineno": 66,
+                  "id": "_value",
+                  "lineno": 66,
+                  "node_id": 399,
+                  "src": "1551:6:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 8,
+              "end_col_offset": 46,
+              "end_lineno": 66,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 8,
+                "end_col_offset": 16,
+                "end_lineno": 66,
+                "id": "Approval",
+                "lineno": 66,
+                "node_id": 391,
+                "src": "1520:8:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 66,
+              "node_id": 390,
+              "src": "1520:38:0"
+            }
+          },
+          {
+            "ast_type": "Return",
+            "col_offset": 4,
+            "end_col_offset": 15,
+            "end_lineno": 67,
+            "lineno": 67,
+            "node_id": 401,
+            "src": "1563:11:0",
+            "value": {
+              "ast_type": "NameConstant",
+              "col_offset": 11,
+              "end_col_offset": 15,
+              "end_lineno": 67,
+              "lineno": 67,
+              "node_id": 402,
+              "src": "1570:4:0",
+              "value": true
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 63,
+            "id": "external",
+            "lineno": 63,
+            "node_id": 403,
+            "src": "1393:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 15,
+        "end_lineno": 67,
+        "lineno": 64,
+        "name": "approve",
+        "node_id": 361,
+        "pos": null,
+        "returns": {
+          "ast_type": "Name",
+          "col_offset": 53,
+          "end_col_offset": 57,
+          "end_lineno": 64,
+          "id": "bool",
+          "lineno": 64,
+          "node_id": 405,
+          "src": "1455:4:0"
+        },
+        "src": "1402:172:0"
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 30,
+                "end_col_offset": 37,
+                "end_lineno": 71,
+                "id": "address",
+                "lineno": 71,
+                "node_id": 410,
+                "src": "1617:7:0"
+              },
+              "arg": "_target",
+              "ast_type": "arg",
+              "col_offset": 21,
+              "end_col_offset": 37,
+              "end_lineno": 71,
+              "lineno": 71,
+              "node_id": 409,
+              "src": "1608:16:0"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 47,
+                "end_col_offset": 54,
+                "end_lineno": 71,
+                "id": "uint256",
+                "lineno": 71,
+                "node_id": 413,
+                "src": "1634:7:0"
+              },
+              "arg": "_value",
+              "ast_type": "arg",
+              "col_offset": 39,
+              "end_col_offset": 54,
+              "end_lineno": 71,
+              "lineno": 71,
+              "node_id": 412,
+              "src": "1626:15:0"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 21,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 54,
+          "end_lineno": 71,
+          "lineno": 71,
+          "node_id": 408,
+          "src": "1608:33:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "AugAssign",
+            "col_offset": 4,
+            "end_col_offset": 31,
+            "end_lineno": 72,
+            "lineno": 72,
+            "node_id": 415,
+            "op": {
+              "ast_type": "Add",
+              "col_offset": 4,
+              "end_col_offset": 31,
+              "end_lineno": 72,
+              "lineno": 72,
+              "node_id": 433,
+              "src": "1656:27:0"
+            },
+            "src": "1656:27:0",
+            "target": {
+              "ast_type": "Attribute",
+              "attr": "total_supply",
+              "col_offset": 4,
+              "end_col_offset": 21,
+              "end_lineno": 72,
+              "lineno": 72,
+              "node_id": 416,
+              "src": "1656:17:0",
+              "value": {
+                "ast_type": "Name",
+                "col_offset": 4,
+                "end_col_offset": 8,
+                "end_lineno": 72,
+                "id": "self",
+                "lineno": 72,
+                "node_id": 417,
+                "src": "1656:4:0"
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 25,
+              "end_col_offset": 31,
+              "end_lineno": 72,
+              "id": "_value",
+              "lineno": 72,
+              "node_id": 421,
+              "src": "1677:6:0"
+            }
+          },
+          {
+            "ast_type": "AugAssign",
+            "col_offset": 4,
+            "end_col_offset": 37,
+            "end_lineno": 73,
+            "lineno": 73,
+            "node_id": 423,
+            "op": {
+              "ast_type": "Add",
+              "col_offset": 4,
+              "end_col_offset": 37,
+              "end_lineno": 73,
+              "lineno": 73,
+              "node_id": 433,
+              "src": "1688:33:0"
+            },
+            "src": "1688:33:0",
+            "target": {
+              "ast_type": "Subscript",
+              "col_offset": 4,
+              "end_col_offset": 27,
+              "end_lineno": 73,
+              "lineno": 73,
+              "node_id": 424,
+              "slice": {
+                "ast_type": "Index",
+                "col_offset": 19,
+                "end_col_offset": 26,
+                "end_lineno": 73,
+                "lineno": 73,
+                "node_id": 429,
+                "src": "1703:7:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 19,
+                  "end_col_offset": 26,
+                  "end_lineno": 73,
+                  "id": "_target",
+                  "lineno": 73,
+                  "node_id": 430,
+                  "src": "1703:7:0"
+                }
+              },
+              "src": "1688:23:0",
+              "value": {
+                "ast_type": "Attribute",
+                "attr": "balanceOf",
+                "col_offset": 4,
+                "end_col_offset": 18,
+                "end_lineno": 73,
+                "lineno": 73,
+                "node_id": 425,
+                "src": "1688:14:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 4,
+                  "end_col_offset": 8,
+                  "end_lineno": 73,
+                  "id": "self",
+                  "lineno": 73,
+                  "node_id": 426,
+                  "src": "1688:4:0"
+                }
+              }
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 31,
+              "end_col_offset": 37,
+              "end_lineno": 73,
+              "id": "_value",
+              "lineno": 73,
+              "node_id": 434,
+              "src": "1715:6:0"
+            }
+          },
+          {
+            "ast_type": "Log",
+            "col_offset": 4,
+            "end_col_offset": 47,
+            "end_lineno": 74,
+            "lineno": 74,
+            "node_id": 437,
+            "src": "1726:43:0",
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 17,
+                  "end_col_offset": 29,
+                  "end_lineno": 74,
+                  "id": "ZERO_ADDRESS",
+                  "lineno": 74,
+                  "node_id": 441,
+                  "src": "1739:12:0"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 31,
+                  "end_col_offset": 38,
+                  "end_lineno": 74,
+                  "id": "_target",
+                  "lineno": 74,
+                  "node_id": 443,
+                  "src": "1753:7:0"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 40,
+                  "end_col_offset": 46,
+                  "end_lineno": 74,
+                  "id": "_value",
+                  "lineno": 74,
+                  "node_id": 445,
+                  "src": "1762:6:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 8,
+              "end_col_offset": 47,
+              "end_lineno": 74,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 8,
+                "end_col_offset": 16,
+                "end_lineno": 74,
+                "id": "Transfer",
+                "lineno": 74,
+                "node_id": 439,
+                "src": "1730:8:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 74,
+              "node_id": 438,
+              "src": "1730:39:0"
+            }
+          },
+          {
+            "ast_type": "Return",
+            "col_offset": 4,
+            "end_col_offset": 15,
+            "end_lineno": 76,
+            "lineno": 76,
+            "node_id": 447,
+            "src": "1775:11:0",
+            "value": {
+              "ast_type": "NameConstant",
+              "col_offset": 11,
+              "end_col_offset": 15,
+              "end_lineno": 76,
+              "lineno": 76,
+              "node_id": 448,
+              "src": "1782:4:0",
+              "value": true
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 70,
+            "id": "external",
+            "lineno": 70,
+            "node_id": 449,
+            "src": "1578:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 15,
+        "end_lineno": 76,
+        "lineno": 71,
+        "name": "mint_for_testing",
+        "node_id": 407,
+        "pos": null,
+        "returns": {
+          "ast_type": "Name",
+          "col_offset": 59,
+          "end_col_offset": 63,
+          "end_lineno": 71,
+          "id": "bool",
+          "lineno": 71,
+          "node_id": 451,
+          "src": "1646:4:0"
+        },
+        "src": "1587:199:0"
+      }
+    ],
+    "col_offset": 0,
+    "doc_string": {
+      "ast_type": "DocStr",
+      "col_offset": 0,
+      "end_col_offset": 3,
+      "end_lineno": 4,
+      "lineno": 2,
+      "node_id": 453,
+      "src": "18:38:0",
+      "value": "\n@notice Mock ERC20 for testing\n"
+    },
+    "end_col_offset": 15,
+    "end_lineno": 76,
+    "lineno": 1,
+    "name": "contracts/ERC20Mock.vy",
+    "node_id": 0,
+    "src": "0:1786:0"
+  },
+  "bytecode": "0x61010061068d610140396060602061068d60c03960c05161068d01610240396040602061068d60c03960c05160040135116106885760406020602061068d0160c03960c05161068d016102c03960206020602061068d0160c03960c0516004013511610688576020606061068d0160c03960c05160a01c610688576020608061068d0160c03960c05160a01c61068857602060a061068d0160c03960c05160a01c61068857602060c061068d0160c03960c05160a01c61068857602060e061068d0160c03960c05160a01c61068857610240806000602082510161012060006003818352015b826101205160200211156100f85761011a565b61012051602002850151610120518501555b81516001018083528114156100e5575b5050505050506102c0806004602082510161012060006002818352015b8261012051602002111561014a5761016c565b61012051602002850151610120518501555b8151600101808352811415610137575b5050505050506101805160075561034060006005818352015b602061034051026101a001516103205260086103205160e05260c052604060c02080546a52b7d2dcc80cd2e4000000818183011061068857808201905090508155505b8151600101808352811415610185575b505061067056600436101561000d57610486565b600035601c526000513461048c576318160ddd81141561003357600a5460005260206000f35b63dd62ed3e81141561007b5760043560a01c61048c5760243560a01c61048c57600960043560e05260c052604060c02060243560e05260c052604060c0205460005260206000f35b63a9059cbb81141561011a5760043560a01c61048c5760083360e05260c052604060c020805460243580821061048c5780820390509050815550600860043560e05260c052604060c0208054602435818183011061048c578082019050905081555060243561014052600435337fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef6020610140a3600160005260206000f35b6323b872dd8114156101f95760043560a01c61048c5760243560a01c61048c57600860043560e05260c052604060c020805460443580821061048c5780820390509050815550600860243560e05260c052604060c0208054604435818183011061048c5780820190509050815550600960043560e05260c052604060c0203360e05260c052604060c020805460443580821061048c5780820390509050815550604435610140526024356004357fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef6020610140a3600160005260206000f35b63095ea7b381141561026c5760043560a01c61048c5760243560093360e05260c052604060c02060043560e05260c052604060c0205560243561014052600435337f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b9256020610140a3600160005260206000f35b636dafc3ab8114156103025760043560a01c61048c57600a8054602435818183011061048c5780820190509050815550600860043560e05260c052604060c0208054602435818183011061048c57808201905090508155506024356101405260043560007fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef6020610140a3600160005260206000f35b6306fdde0381141561039f57600080610180602082540161012060006003818352015b826101205160200211156103385761035a565b61012051850154610120516020028501525b8151600101808352811415610325575b50505050505061018051806101a001818260206001820306601f82010390500336823750506020610160526040610180510160206001820306601f8201039050610160f35b6395d89b4181141561043c57600480610180602082540161012060006002818352015b826101205160200211156103d5576103f7565b61012051850154610120516020028501525b81516001018083528114156103c2575b50505050505061018051806101a001818260206001820306601f82010390500336823750506020610160526040610180510160206001820306601f8201039050610160f35b63313ce5678114156104545760075460005260206000f35b6370a082318114156104845760043560a01c61048c57600860043560e05260c052604060c0205460005260206000f35b505b60006000fd5b600080fd5b6101df610670036101df6000396101df610670036000f35b600080fd",
+  "bytecodeSha1": "2160bc1954ae1a20018c152703b9f051822f5ed7",
+  "compiler": {
+    "evm_version": "istanbul",
+    "version": "0.2.15"
+  },
+  "contractName": "ERC20Mock",
+  "coverageMap": {
+    "branches": {
+      "0": {}
+    },
+    "statements": {
+      "0": {
+        "ERC20Mock.allowance": {
+          "1": [889, 929]
+        },
+        "ERC20Mock.approve": {
+          "11": [1465, 1511],
+          "12": [1516, 1558],
+          "13": [1563, 1574]
+        },
+        "ERC20Mock.mint_for_testing": {
+          "14": [1656, 1683],
+          "15": [1688, 1721],
+          "16": [1726, 1769],
+          "17": [1775, 1786]
+        },
+        "ERC20Mock.totalSupply": {
+          "0": [778, 802]
+        },
+        "ERC20Mock.transfer": {
+          "2": [1001, 1037],
+          "3": [1042, 1071],
+          "4": [1076, 1113],
+          "5": [1118, 1129]
+        },
+        "ERC20Mock.transferFrom": {
+          "6": [1222, 1253],
+          "7": [1258, 1287],
+          "8": [1292, 1336],
+          "9": [1341, 1373],
+          "10": [1378, 1389]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "0x600436101561000d57610486565b600035601c526000513461048c576318160ddd81141561003357600a5460005260206000f35b63dd62ed3e81141561007b5760043560a01c61048c5760243560a01c61048c57600960043560e05260c052604060c02060243560e05260c052604060c0205460005260206000f35b63a9059cbb81141561011a5760043560a01c61048c5760083360e05260c052604060c020805460243580821061048c5780820390509050815550600860043560e05260c052604060c0208054602435818183011061048c578082019050905081555060243561014052600435337fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef6020610140a3600160005260206000f35b6323b872dd8114156101f95760043560a01c61048c5760243560a01c61048c57600860043560e05260c052604060c020805460443580821061048c5780820390509050815550600860243560e05260c052604060c0208054604435818183011061048c5780820190509050815550600960043560e05260c052604060c0203360e05260c052604060c020805460443580821061048c5780820390509050815550604435610140526024356004357fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef6020610140a3600160005260206000f35b63095ea7b381141561026c5760043560a01c61048c5760243560093360e05260c052604060c02060043560e05260c052604060c0205560243561014052600435337f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b9256020610140a3600160005260206000f35b636dafc3ab8114156103025760043560a01c61048c57600a8054602435818183011061048c5780820190509050815550600860043560e05260c052604060c0208054602435818183011061048c57808201905090508155506024356101405260043560007fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef6020610140a3600160005260206000f35b6306fdde0381141561039f57600080610180602082540161012060006003818352015b826101205160200211156103385761035a565b61012051850154610120516020028501525b8151600101808352811415610325575b50505050505061018051806101a001818260206001820306601f82010390500336823750506020610160526040610180510160206001820306601f8201039050610160f35b6395d89b4181141561043c57600480610180602082540161012060006002818352015b826101205160200211156103d5576103f7565b61012051850154610120516020028501525b81516001018083528114156103c2575b50505050505061018051806101a001818260206001820306601f82010390500336823750506020610160526040610180510160206001820306601f8201039050610160f35b63313ce5678114156104545760075460005260206000f35b6370a082318114156104845760043560a01c61048c57600860043560e05260c052604060c0205460005260206000f35b505b60006000fd5b600080fd",
+  "deployedSourceMap": "-1:-1:0:-;;;;;:::-;;:::-;:::-;;;;;;;;;:::-;744:58;;;;;:::-;785:17;778:24;;;;;;744:58::-;821:108;;;;;:::-;-1:-1;;;;821:108;:::-;-1:-1;;;;821:108;:::-;896:15;912:6;-1:-1;;;;;;;;920:8;-1:-1;;;;;;;;889:40;;;;;;821:108::-;942:187;;;;;:::-;-1:-1;;;;942:187;:::-;1001:14;1016:10;1001:36;;;;;;;-1:-1;1001:36;1031:6;1001:36;;;-1:-1;1001:36;:::-;;;;;;;;;;;1042:14;1057:3;-1:-1;1042:29;;;;;;;-1:-1;1042:29;1065:6;1042:29;;;;;-1:-1;1042:29;:::-;;;;;;;;;;;1106:6;-1:-1;;1076:37;1101:3;-1:-1;1089:10;-1:-1;;;1076:37;1125:4;1118:11;;;;;942:187::-;1142:247;;;;;:::-;-1:-1;;;;1142:247;:::-;-1:-1;;;;1142:247;:::-;1222:14;1237:5;-1:-1;1222:31;;;;;;;-1:-1;1222:31;1247:6;1222:31;;;-1:-1;1222:31;:::-;;;;;;;;;;;1258:14;1273:3;-1:-1;1258:29;;;;;;;-1:-1;1258:29;1281:6;1258:29;;;;;-1:-1;1258:29;:::-;;;;;;;;;;;1292:15;1308:5;-1:-1;;;;;;;;1315:10;1292:44;;;;;;;-1:-1;1292:44;1330:6;1292:44;;;-1:-1;1292:44;:::-;;;;;;;;;;;1366:6;-1:-1;;1341:32;1361:3;-1:-1;1354:5;-1:-1;;;;1341:32;1385:4;1378:11;;;;;1142:247::-;1402:172;;;;;:::-;-1:-1;;;;1402:172;:::-;1505:6;-1:-1;1465:15;1481:10;-1:-1;;;;;;;1493:8;-1:-1;;;;;;;;1465:46;1551:6;-1:-1;;1516:42;1541:8;-1:-1;1529:10;-1:-1;;;1516:42;1570:4;1563:11;;;;;1402:172::-;1587:199;;;;;:::-;-1:-1;;;;1587:199;:::-;1656:17;;;1677:6;1656:27;;;;;-1:-1;1656:27;:::-;;;;;;;;;;;1688:14;1703:7;-1:-1;1688:33;;;;;;;-1:-1;1688:33;1715:6;1688:33;;;;;-1:-1;1688:33;:::-;;;;;;;;;;;1762:6;-1:-1;;1726:43;1753:7;-1:-1;1739:12;-1:-1;;;1726:43;1782:4;1775:11;;;;;1587:199::-;252:18;;;;;:::-;-1:-1;252:18;;;;;;;;;;;;;:::-;;;;;;;;;:::-;;:::-;:::-;;;;;;;;;;;;;:::-;;;;;;;;;;;;:::-;:::-;;;;;;;-1:-1;;;;;;;;;;;;;;;;;;;;;;;252:18;;;;;;;;-1:-1;;;;;;;;;;;252:18;;:::-;279;;;;;:::-;-1:-1;279:18;;;;;;;;;;;;;:::-;;;;;;;;;:::-;;:::-;:::-;;;;;;;;;;;;;:::-;;;;;;;;;;;;:::-;:::-;;;;;;;-1:-1;;;;;;;;;;;;;;;;;;;;;;;279:18;;;;;;;;-1:-1;;;;;;;;;;;279:18;;:::-;308:15;;;;;:::-;-1:-1;308:15;;;;;;:::-;335:33;;;;;:::-;-1:-1;;;;335:33;:::-;-1:-1;;;;;;;;;;335:33;;;;;;:::-;-1:-1;:::-;;;;:::-;;;;",
+  "language": "Vyper",
+  "natspec": {
+    "methods": {},
+    "notice": "Mock ERC20 for testing"
+  },
+  "offset": [0, 1787],
+  "opcodes": "PUSH1 0x4 CALLDATASIZE LT ISZERO PUSH2 0x0D JUMPI PUSH2 0x486 JUMP JUMPDEST PUSH1 0x0 CALLDATALOAD PUSH1 0x1C MSTORE PUSH1 0x0 MLOAD CALLVALUE PUSH2 0x48C JUMPI PUSH4 0x1816DDD DUP2 EQ ISZERO PUSH2 0x033 JUMPI PUSH1 0xA SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0xDD62ED3E DUP2 EQ ISZERO PUSH2 0x07B JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR PUSH2 0x48C JUMPI PUSH1 0x24 CALLDATALOAD PUSH1 0xA0 SHR PUSH2 0x48C JUMPI PUSH1 0x9 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 PUSH1 0x24 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0xA959CBB DUP2 EQ ISZERO PUSH2 0x11A JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR PUSH2 0x48C JUMPI PUSH1 0x8 CALLER PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 DUP1 SLOAD PUSH1 0x24 CALLDATALOAD DUP1 DUP3 LT PUSH2 0x48C JUMPI DUP1 DUP3 SUB SWAP1 POP SWAP1 POP DUP2 SSTORE POP PUSH1 0x8 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 DUP1 SLOAD PUSH1 0x24 CALLDATALOAD DUP2 DUP2 DUP4 ADD LT PUSH2 0x48C JUMPI DUP1 DUP3 ADD SWAP1 POP SWAP1 POP DUP2 SSTORE POP PUSH1 0x24 CALLDATALOAD PUSH2 0x140 MSTORE PUSH1 0x4 CALLDATALOAD CALLER PUSH32 0xDDF252AD1BE2C89B69C2B068FC378DAA952BA7F163C4A11628F55A4DF523B3EF PUSH1 0x20 PUSH2 0x140 LOG3 PUSH1 0x1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x23B872DD DUP2 EQ ISZERO PUSH2 0x1F9 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR PUSH2 0x48C JUMPI PUSH1 0x24 CALLDATALOAD PUSH1 0xA0 SHR PUSH2 0x48C JUMPI PUSH1 0x8 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 DUP1 SLOAD PUSH1 0x44 CALLDATALOAD DUP1 DUP3 LT PUSH2 0x48C JUMPI DUP1 DUP3 SUB SWAP1 POP SWAP1 POP DUP2 SSTORE POP PUSH1 0x8 PUSH1 0x24 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 DUP1 SLOAD PUSH1 0x44 CALLDATALOAD DUP2 DUP2 DUP4 ADD LT PUSH2 0x48C JUMPI DUP1 DUP3 ADD SWAP1 POP SWAP1 POP DUP2 SSTORE POP PUSH1 0x9 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 CALLER PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 DUP1 SLOAD PUSH1 0x44 CALLDATALOAD DUP1 DUP3 LT PUSH2 0x48C JUMPI DUP1 DUP3 SUB SWAP1 POP SWAP1 POP DUP2 SSTORE POP PUSH1 0x44 CALLDATALOAD PUSH2 0x140 MSTORE PUSH1 0x24 CALLDATALOAD PUSH1 0x4 CALLDATALOAD PUSH32 0xDDF252AD1BE2C89B69C2B068FC378DAA952BA7F163C4A11628F55A4DF523B3EF PUSH1 0x20 PUSH2 0x140 LOG3 PUSH1 0x1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x95EA7B3 DUP2 EQ ISZERO PUSH2 0x26C JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR PUSH2 0x48C JUMPI PUSH1 0x24 CALLDATALOAD PUSH1 0x9 CALLER PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SSTORE PUSH1 0x24 CALLDATALOAD PUSH2 0x140 MSTORE PUSH1 0x4 CALLDATALOAD CALLER PUSH32 0x8C5BE1E5EBEC7D5BD14F71427D1E84F3DD314C0F7B2291E5B20AC8C7C3B925 PUSH1 0x20 PUSH2 0x140 LOG3 PUSH1 0x1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x6DAFC3AB DUP2 EQ ISZERO PUSH2 0x32 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR PUSH2 0x48C JUMPI PUSH1 0xA DUP1 SLOAD PUSH1 0x24 CALLDATALOAD DUP2 DUP2 DUP4 ADD LT PUSH2 0x48C JUMPI DUP1 DUP3 ADD SWAP1 POP SWAP1 POP DUP2 SSTORE POP PUSH1 0x8 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 DUP1 SLOAD PUSH1 0x24 CALLDATALOAD DUP2 DUP2 DUP4 ADD LT PUSH2 0x48C JUMPI DUP1 DUP3 ADD SWAP1 POP SWAP1 POP DUP2 SSTORE POP PUSH1 0x24 CALLDATALOAD PUSH2 0x140 MSTORE PUSH1 0x4 CALLDATALOAD PUSH1 0x0 PUSH32 0xDDF252AD1BE2C89B69C2B068FC378DAA952BA7F163C4A11628F55A4DF523B3EF PUSH1 0x20 PUSH2 0x140 LOG3 PUSH1 0x1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x6FDDE3 DUP2 EQ ISZERO PUSH2 0x39F JUMPI PUSH1 0x0 DUP1 PUSH2 0x180 PUSH1 0x20 DUP3 SLOAD ADD PUSH2 0x120 PUSH1 0x0 PUSH1 0x3 DUP2 DUP4 MSTORE ADD JUMPDEST DUP3 PUSH2 0x120 MLOAD PUSH1 0x20 MUL GT ISZERO PUSH2 0x338 JUMPI PUSH2 0x35A JUMP JUMPDEST PUSH2 0x120 MLOAD DUP6 ADD SLOAD PUSH2 0x120 MLOAD PUSH1 0x20 MUL DUP6 ADD MSTORE JUMPDEST DUP2 MLOAD PUSH1 0x1 ADD DUP1 DUP4 MSTORE DUP2 EQ ISZERO PUSH2 0x325 JUMPI JUMPDEST POP POP POP POP POP POP PUSH2 0x180 MLOAD DUP1 PUSH2 0x1A0 ADD DUP2 DUP3 PUSH1 0x20 PUSH1 0x1 DUP3 SUB MOD PUSH1 0x1F DUP3 ADD SUB SWAP1 POP SUB CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x20 PUSH2 0x160 MSTORE PUSH1 0x40 PUSH2 0x180 MLOAD ADD PUSH1 0x20 PUSH1 0x1 DUP3 SUB MOD PUSH1 0x1F DUP3 ADD SUB SWAP1 POP PUSH2 0x160 RETURN JUMPDEST PUSH4 0x95D89B41 DUP2 EQ ISZERO PUSH2 0x43C JUMPI PUSH1 0x4 DUP1 PUSH2 0x180 PUSH1 0x20 DUP3 SLOAD ADD PUSH2 0x120 PUSH1 0x0 PUSH1 0x2 DUP2 DUP4 MSTORE ADD JUMPDEST DUP3 PUSH2 0x120 MLOAD PUSH1 0x20 MUL GT ISZERO PUSH2 0x3D5 JUMPI PUSH2 0x3F7 JUMP JUMPDEST PUSH2 0x120 MLOAD DUP6 ADD SLOAD PUSH2 0x120 MLOAD PUSH1 0x20 MUL DUP6 ADD MSTORE JUMPDEST DUP2 MLOAD PUSH1 0x1 ADD DUP1 DUP4 MSTORE DUP2 EQ ISZERO PUSH2 0x3C2 JUMPI JUMPDEST POP POP POP POP POP POP PUSH2 0x180 MLOAD DUP1 PUSH2 0x1A0 ADD DUP2 DUP3 PUSH1 0x20 PUSH1 0x1 DUP3 SUB MOD PUSH1 0x1F DUP3 ADD SUB SWAP1 POP SUB CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x20 PUSH2 0x160 MSTORE PUSH1 0x40 PUSH2 0x180 MLOAD ADD PUSH1 0x20 PUSH1 0x1 DUP3 SUB MOD PUSH1 0x1F DUP3 ADD SUB SWAP1 POP PUSH2 0x160 RETURN JUMPDEST PUSH4 0x313CE567 DUP2 EQ ISZERO PUSH2 0x454 JUMPI PUSH1 0x7 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST PUSH4 0x70A08231 DUP2 EQ ISZERO PUSH2 0x484 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0xA0 SHR PUSH2 0x48C JUMPI PUSH1 0x8 PUSH1 0x4 CALLDATALOAD PUSH1 0xE0 MSTORE PUSH1 0xC0 MSTORE PUSH1 0x40 PUSH1 0xC0 SHA3 SLOAD PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 RETURN JUMPDEST POP JUMPDEST PUSH1 0x0 PUSH1 0x0 REVERT JUMPDEST PUSH1 0x0 DUP1 REVERT",
+  "pcMap": {
+    "0": {
+      "offset": [0, 1786],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "2": {
+      "op": "CALLDATASIZE"
+    },
+    "3": {
+      "op": "LT"
+    },
+    "4": {
+      "op": "ISZERO"
+    },
+    "5": {
+      "op": "PUSH2",
+      "value": "0x0D"
+    },
+    "8": {
+      "op": "JUMPI"
+    },
+    "9": {
+      "op": "PUSH2",
+      "value": "0x486"
+    },
+    "12": {
+      "op": "JUMP"
+    },
+    "13": {
+      "op": "JUMPDEST"
+    },
+    "14": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "16": {
+      "op": "CALLDATALOAD"
+    },
+    "17": {
+      "op": "PUSH1",
+      "value": "0x1C"
+    },
+    "19": {
+      "op": "MSTORE"
+    },
+    "20": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "22": {
+      "op": "MLOAD"
+    },
+    "23": {
+      "op": "CALLVALUE"
+    },
+    "24": {
+      "op": "PUSH2",
+      "value": "0x48C"
+    },
+    "27": {
+      "dev": "Cannot send ether to nonpayable function",
+      "offset": [0, 0],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "28": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [744, 802],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x1816DDD"
+    },
+    "33": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [744, 802],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "34": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [744, 802],
+      "op": "EQ",
+      "path": "0"
+    },
+    "35": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [744, 802],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "36": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [744, 802],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x033"
+    },
+    "39": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [744, 802],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "40": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [785, 802],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 0,
+      "value": "0xA"
+    },
+    "42": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [778, 802],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "43": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [778, 802],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "45": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [778, 802],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "46": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [778, 802],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "48": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [778, 802],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "50": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [778, 802],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "51": {
+      "fn": "ERC20Mock.totalSupply",
+      "offset": [744, 802],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "52": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [821, 929],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xDD62ED3E"
+    },
+    "57": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [821, 929],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "58": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [821, 929],
+      "op": "EQ",
+      "path": "0"
+    },
+    "59": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [821, 929],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "60": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [821, 929],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x07B"
+    },
+    "63": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [821, 929],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "64": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "66": {
+      "op": "CALLDATALOAD"
+    },
+    "67": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "69": {
+      "op": "SHR"
+    },
+    "70": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [821, 929],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "73": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [821, 929],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "74": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "76": {
+      "op": "CALLDATALOAD"
+    },
+    "77": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "79": {
+      "op": "SHR"
+    },
+    "80": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [821, 929],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "83": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [821, 929],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "84": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [896, 911],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 1,
+      "value": "0x9"
+    },
+    "86": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [912, 918],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "88": {
+      "op": "CALLDATALOAD"
+    },
+    "89": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "91": {
+      "op": "MSTORE"
+    },
+    "92": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "94": {
+      "op": "MSTORE"
+    },
+    "95": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "97": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "99": {
+      "op": "SHA3"
+    },
+    "100": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [920, 928],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "102": {
+      "op": "CALLDATALOAD"
+    },
+    "103": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "105": {
+      "op": "MSTORE"
+    },
+    "106": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "108": {
+      "op": "MSTORE"
+    },
+    "109": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "111": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "113": {
+      "op": "SHA3"
+    },
+    "114": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [889, 929],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "115": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [889, 929],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "117": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [889, 929],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "118": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [889, 929],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "120": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [889, 929],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "122": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [889, 929],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "123": {
+      "fn": "ERC20Mock.allowance",
+      "offset": [821, 929],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "124": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [942, 1129],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xA959CBB"
+    },
+    "129": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [942, 1129],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "130": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [942, 1129],
+      "op": "EQ",
+      "path": "0"
+    },
+    "131": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [942, 1129],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "132": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [942, 1129],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x11A"
+    },
+    "135": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [942, 1129],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "136": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "138": {
+      "op": "CALLDATALOAD"
+    },
+    "139": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "141": {
+      "op": "SHR"
+    },
+    "142": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [942, 1129],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "145": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [942, 1129],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "146": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1015],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 2,
+      "value": "0x8"
+    },
+    "148": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1016, 1026],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "149": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "151": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "152": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "154": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "155": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "157": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "159": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "SHA3",
+      "path": "0"
+    },
+    "160": {
+      "op": "DUP1"
+    },
+    "161": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "162": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1031, 1037],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "164": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "165": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "166": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "167": {
+      "op": "LT"
+    },
+    "168": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "171": {
+      "dev": "Integer underflow",
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "172": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "173": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "174": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "SUB",
+      "path": "0"
+    },
+    "175": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "176": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "POP",
+      "path": "0"
+    },
+    "177": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "178": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "POP",
+      "path": "0"
+    },
+    "179": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "180": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "181": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1001, 1037],
+      "op": "POP",
+      "path": "0"
+    },
+    "182": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1056],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 3,
+      "value": "0x8"
+    },
+    "184": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1057, 1060],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "186": {
+      "op": "CALLDATALOAD"
+    },
+    "187": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "189": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "190": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "192": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "193": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "195": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "197": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "SHA3",
+      "path": "0"
+    },
+    "198": {
+      "op": "DUP1"
+    },
+    "199": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "200": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1065, 1071],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "202": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "203": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "204": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "205": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "206": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "ADD",
+      "path": "0"
+    },
+    "207": {
+      "op": "LT"
+    },
+    "208": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "211": {
+      "dev": "Integer overflow",
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "212": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "213": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "214": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "ADD",
+      "path": "0"
+    },
+    "215": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "216": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "POP",
+      "path": "0"
+    },
+    "217": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "218": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "POP",
+      "path": "0"
+    },
+    "219": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "220": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "221": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1042, 1071],
+      "op": "POP",
+      "path": "0"
+    },
+    "222": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1106, 1112],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 4,
+      "value": "0x24"
+    },
+    "224": {
+      "op": "CALLDATALOAD"
+    },
+    "225": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "228": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1076, 1113],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "229": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1101, 1104],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "231": {
+      "op": "CALLDATALOAD"
+    },
+    "232": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1089, 1099],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "233": {
+      "op": "PUSH32",
+      "value": "0xDDF252AD1BE2C89B69C2B068FC378DAA952BA7F163C4A11628F55A4DF523B3EF"
+    },
+    "266": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "268": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "271": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1076, 1113],
+      "op": "LOG3",
+      "path": "0"
+    },
+    "272": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1125, 1129],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 5,
+      "value": "0x1"
+    },
+    "274": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1118, 1129],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "276": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1118, 1129],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "277": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1118, 1129],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "279": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1118, 1129],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "281": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [1118, 1129],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "282": {
+      "fn": "ERC20Mock.transfer",
+      "offset": [942, 1129],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "283": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1142, 1389],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x23B872DD"
+    },
+    "288": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1142, 1389],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "289": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1142, 1389],
+      "op": "EQ",
+      "path": "0"
+    },
+    "290": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1142, 1389],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "291": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1142, 1389],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1F9"
+    },
+    "294": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1142, 1389],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "295": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "297": {
+      "op": "CALLDATALOAD"
+    },
+    "298": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "300": {
+      "op": "SHR"
+    },
+    "301": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1142, 1389],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "304": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1142, 1389],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "305": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "307": {
+      "op": "CALLDATALOAD"
+    },
+    "308": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "310": {
+      "op": "SHR"
+    },
+    "311": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1142, 1389],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "314": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1142, 1389],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "315": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1236],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 6,
+      "value": "0x8"
+    },
+    "317": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1237, 1242],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "319": {
+      "op": "CALLDATALOAD"
+    },
+    "320": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "322": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "323": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "325": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "326": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "328": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "330": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "SHA3",
+      "path": "0"
+    },
+    "331": {
+      "op": "DUP1"
+    },
+    "332": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "333": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1247, 1253],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x44"
+    },
+    "335": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "336": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "337": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "338": {
+      "op": "LT"
+    },
+    "339": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "342": {
+      "dev": "Integer underflow",
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "343": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "344": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "345": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "SUB",
+      "path": "0"
+    },
+    "346": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "347": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "POP",
+      "path": "0"
+    },
+    "348": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "349": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "POP",
+      "path": "0"
+    },
+    "350": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "351": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "352": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1222, 1253],
+      "op": "POP",
+      "path": "0"
+    },
+    "353": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1272],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 7,
+      "value": "0x8"
+    },
+    "355": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1273, 1276],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "357": {
+      "op": "CALLDATALOAD"
+    },
+    "358": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "360": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "361": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "363": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "364": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "366": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "368": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "SHA3",
+      "path": "0"
+    },
+    "369": {
+      "op": "DUP1"
+    },
+    "370": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "371": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1281, 1287],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x44"
+    },
+    "373": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "374": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "375": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "376": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "377": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "ADD",
+      "path": "0"
+    },
+    "378": {
+      "op": "LT"
+    },
+    "379": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "382": {
+      "dev": "Integer overflow",
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "383": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "384": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "385": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "ADD",
+      "path": "0"
+    },
+    "386": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "387": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "POP",
+      "path": "0"
+    },
+    "388": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "389": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "POP",
+      "path": "0"
+    },
+    "390": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "391": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "392": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1258, 1287],
+      "op": "POP",
+      "path": "0"
+    },
+    "393": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1307],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 8,
+      "value": "0x9"
+    },
+    "395": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1308, 1313],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "397": {
+      "op": "CALLDATALOAD"
+    },
+    "398": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "400": {
+      "op": "MSTORE"
+    },
+    "401": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "403": {
+      "op": "MSTORE"
+    },
+    "404": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "406": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "408": {
+      "op": "SHA3"
+    },
+    "409": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1315, 1325],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "410": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "412": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "413": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "415": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "416": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "418": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "420": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "SHA3",
+      "path": "0"
+    },
+    "421": {
+      "op": "DUP1"
+    },
+    "422": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "423": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1330, 1336],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x44"
+    },
+    "425": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "426": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "427": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "428": {
+      "op": "LT"
+    },
+    "429": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "432": {
+      "dev": "Integer underflow",
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "433": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "434": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "435": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "SUB",
+      "path": "0"
+    },
+    "436": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "437": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "POP",
+      "path": "0"
+    },
+    "438": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "439": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "POP",
+      "path": "0"
+    },
+    "440": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "441": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "442": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1292, 1336],
+      "op": "POP",
+      "path": "0"
+    },
+    "443": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1366, 1372],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 9,
+      "value": "0x44"
+    },
+    "445": {
+      "op": "CALLDATALOAD"
+    },
+    "446": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "449": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1341, 1373],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "450": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1361, 1364],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "452": {
+      "op": "CALLDATALOAD"
+    },
+    "453": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1354, 1359],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "455": {
+      "op": "CALLDATALOAD"
+    },
+    "456": {
+      "op": "PUSH32",
+      "value": "0xDDF252AD1BE2C89B69C2B068FC378DAA952BA7F163C4A11628F55A4DF523B3EF"
+    },
+    "489": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "491": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "494": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1341, 1373],
+      "op": "LOG3",
+      "path": "0"
+    },
+    "495": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1385, 1389],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 10,
+      "value": "0x1"
+    },
+    "497": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1378, 1389],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "499": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1378, 1389],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "500": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1378, 1389],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "502": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1378, 1389],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "504": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1378, 1389],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "505": {
+      "fn": "ERC20Mock.transferFrom",
+      "offset": [1142, 1389],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "506": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1402, 1574],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x95EA7B3"
+    },
+    "511": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1402, 1574],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "512": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1402, 1574],
+      "op": "EQ",
+      "path": "0"
+    },
+    "513": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1402, 1574],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "514": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1402, 1574],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x26C"
+    },
+    "517": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1402, 1574],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "518": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "520": {
+      "op": "CALLDATALOAD"
+    },
+    "521": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "523": {
+      "op": "SHR"
+    },
+    "524": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1402, 1574],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "527": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1402, 1574],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "528": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1505, 1511],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 11,
+      "value": "0x24"
+    },
+    "530": {
+      "op": "CALLDATALOAD"
+    },
+    "531": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1465, 1480],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x9"
+    },
+    "533": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1481, 1491],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "534": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "536": {
+      "op": "MSTORE"
+    },
+    "537": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "539": {
+      "op": "MSTORE"
+    },
+    "540": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "542": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "544": {
+      "op": "SHA3"
+    },
+    "545": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1493, 1501],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "547": {
+      "op": "CALLDATALOAD"
+    },
+    "548": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "550": {
+      "op": "MSTORE"
+    },
+    "551": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "553": {
+      "op": "MSTORE"
+    },
+    "554": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "556": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "558": {
+      "op": "SHA3"
+    },
+    "559": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1465, 1511],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "560": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1551, 1557],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 12,
+      "value": "0x24"
+    },
+    "562": {
+      "op": "CALLDATALOAD"
+    },
+    "563": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "566": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1516, 1558],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "567": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1541, 1549],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "569": {
+      "op": "CALLDATALOAD"
+    },
+    "570": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1529, 1539],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "571": {
+      "op": "PUSH32",
+      "value": "0x8C5BE1E5EBEC7D5BD14F71427D1E84F3DD314C0F7B2291E5B20AC8C7C3B925"
+    },
+    "604": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "606": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "609": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1516, 1558],
+      "op": "LOG3",
+      "path": "0"
+    },
+    "610": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1570, 1574],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 13,
+      "value": "0x1"
+    },
+    "612": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1563, 1574],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "614": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1563, 1574],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "615": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1563, 1574],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "617": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1563, 1574],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "619": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1563, 1574],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "620": {
+      "fn": "ERC20Mock.approve",
+      "offset": [1402, 1574],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "621": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1587, 1786],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x6DAFC3AB"
+    },
+    "626": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1587, 1786],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "627": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1587, 1786],
+      "op": "EQ",
+      "path": "0"
+    },
+    "628": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1587, 1786],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "629": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1587, 1786],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x32"
+    },
+    "632": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1587, 1786],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "633": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "635": {
+      "op": "CALLDATALOAD"
+    },
+    "636": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "638": {
+      "op": "SHR"
+    },
+    "639": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1587, 1786],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "642": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1587, 1786],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "643": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1673],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 14,
+      "value": "0xA"
+    },
+    "645": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1673],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "646": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1673],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "647": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1677, 1683],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "649": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "650": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "651": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "652": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "653": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "ADD",
+      "path": "0"
+    },
+    "654": {
+      "op": "LT"
+    },
+    "655": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "658": {
+      "dev": "Integer overflow",
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "659": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "660": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "661": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "ADD",
+      "path": "0"
+    },
+    "662": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "663": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "POP",
+      "path": "0"
+    },
+    "664": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "665": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "POP",
+      "path": "0"
+    },
+    "666": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "667": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "668": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1656, 1683],
+      "op": "POP",
+      "path": "0"
+    },
+    "669": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1702],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 15,
+      "value": "0x8"
+    },
+    "671": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1703, 1710],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "673": {
+      "op": "CALLDATALOAD"
+    },
+    "674": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "676": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "677": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "679": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "680": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "682": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "684": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "SHA3",
+      "path": "0"
+    },
+    "685": {
+      "op": "DUP1"
+    },
+    "686": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "687": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1715, 1721],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "689": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "690": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "691": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "692": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "693": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "ADD",
+      "path": "0"
+    },
+    "694": {
+      "op": "LT"
+    },
+    "695": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "698": {
+      "dev": "Integer overflow",
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "699": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "700": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "701": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "ADD",
+      "path": "0"
+    },
+    "702": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "703": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "POP",
+      "path": "0"
+    },
+    "704": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "705": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "POP",
+      "path": "0"
+    },
+    "706": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "707": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "708": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1688, 1721],
+      "op": "POP",
+      "path": "0"
+    },
+    "709": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1762, 1768],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 16,
+      "value": "0x24"
+    },
+    "711": {
+      "op": "CALLDATALOAD"
+    },
+    "712": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "715": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1726, 1769],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "716": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1753, 1760],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "718": {
+      "op": "CALLDATALOAD"
+    },
+    "719": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1739, 1751],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "721": {
+      "op": "PUSH32",
+      "value": "0xDDF252AD1BE2C89B69C2B068FC378DAA952BA7F163C4A11628F55A4DF523B3EF"
+    },
+    "754": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "756": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "759": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1726, 1769],
+      "op": "LOG3",
+      "path": "0"
+    },
+    "760": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1782, 1786],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 17,
+      "value": "0x1"
+    },
+    "762": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1775, 1786],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "764": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1775, 1786],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "765": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1775, 1786],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "767": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1775, 1786],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "769": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1775, 1786],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "770": {
+      "fn": "ERC20Mock.mint_for_testing",
+      "offset": [1587, 1786],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "771": {
+      "offset": [252, 270],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x6FDDE3"
+    },
+    "776": {
+      "offset": [252, 270],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "777": {
+      "offset": [252, 270],
+      "op": "EQ",
+      "path": "0"
+    },
+    "778": {
+      "offset": [252, 270],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "779": {
+      "offset": [252, 270],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x39F"
+    },
+    "782": {
+      "offset": [252, 270],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "783": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "785": {
+      "offset": [252, 270],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "786": {
+      "offset": [252, 270],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x180"
+    },
+    "789": {
+      "offset": [252, 270],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "791": {
+      "offset": [252, 270],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "792": {
+      "offset": [252, 270],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "793": {
+      "offset": [252, 270],
+      "op": "ADD",
+      "path": "0"
+    },
+    "794": {
+      "offset": [252, 270],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x120"
+    },
+    "797": {
+      "offset": [252, 270],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "799": {
+      "offset": [252, 270],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "801": {
+      "offset": [252, 270],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "802": {
+      "offset": [252, 270],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "803": {
+      "offset": [252, 270],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "804": {
+      "offset": [252, 270],
+      "op": "ADD",
+      "path": "0"
+    },
+    "805": {
+      "offset": [252, 270],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "806": {
+      "offset": [252, 270],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "807": {
+      "offset": [252, 270],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x120"
+    },
+    "810": {
+      "offset": [252, 270],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "811": {
+      "offset": [252, 270],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "813": {
+      "offset": [252, 270],
+      "op": "MUL",
+      "path": "0"
+    },
+    "814": {
+      "offset": [252, 270],
+      "op": "GT",
+      "path": "0"
+    },
+    "815": {
+      "offset": [252, 270],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "816": {
+      "offset": [252, 270],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x338"
+    },
+    "819": {
+      "offset": [252, 270],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "820": {
+      "offset": [252, 270],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x35A"
+    },
+    "823": {
+      "offset": [252, 270],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "824": {
+      "offset": [252, 270],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "825": {
+      "offset": [252, 270],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x120"
+    },
+    "828": {
+      "offset": [252, 270],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "829": {
+      "offset": [252, 270],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "830": {
+      "offset": [252, 270],
+      "op": "ADD",
+      "path": "0"
+    },
+    "831": {
+      "offset": [252, 270],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "832": {
+      "offset": [252, 270],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x120"
+    },
+    "835": {
+      "offset": [252, 270],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "836": {
+      "offset": [252, 270],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "838": {
+      "offset": [252, 270],
+      "op": "MUL",
+      "path": "0"
+    },
+    "839": {
+      "offset": [252, 270],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "840": {
+      "offset": [252, 270],
+      "op": "ADD",
+      "path": "0"
+    },
+    "841": {
+      "offset": [252, 270],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "842": {
+      "offset": [252, 270],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "843": {
+      "offset": [252, 270],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "844": {
+      "offset": [252, 270],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "845": {
+      "offset": [252, 270],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "847": {
+      "offset": [252, 270],
+      "op": "ADD",
+      "path": "0"
+    },
+    "848": {
+      "offset": [252, 270],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "849": {
+      "offset": [252, 270],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "850": {
+      "offset": [252, 270],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "851": {
+      "offset": [252, 270],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "852": {
+      "offset": [252, 270],
+      "op": "EQ",
+      "path": "0"
+    },
+    "853": {
+      "offset": [252, 270],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "854": {
+      "offset": [252, 270],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x325"
+    },
+    "857": {
+      "offset": [252, 270],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "858": {
+      "offset": [252, 270],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "859": {
+      "offset": [252, 270],
+      "op": "POP",
+      "path": "0"
+    },
+    "860": {
+      "offset": [252, 270],
+      "op": "POP",
+      "path": "0"
+    },
+    "861": {
+      "offset": [252, 270],
+      "op": "POP",
+      "path": "0"
+    },
+    "862": {
+      "offset": [252, 270],
+      "op": "POP",
+      "path": "0"
+    },
+    "863": {
+      "offset": [252, 270],
+      "op": "POP",
+      "path": "0"
+    },
+    "864": {
+      "offset": [252, 270],
+      "op": "POP",
+      "path": "0"
+    },
+    "865": {
+      "op": "PUSH2",
+      "value": "0x180"
+    },
+    "868": {
+      "op": "MLOAD"
+    },
+    "869": {
+      "op": "DUP1"
+    },
+    "870": {
+      "op": "PUSH2",
+      "value": "0x1A0"
+    },
+    "873": {
+      "op": "ADD"
+    },
+    "874": {
+      "op": "DUP2"
+    },
+    "875": {
+      "op": "DUP3"
+    },
+    "876": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "878": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "880": {
+      "op": "DUP3"
+    },
+    "881": {
+      "op": "SUB"
+    },
+    "882": {
+      "op": "MOD"
+    },
+    "883": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "885": {
+      "op": "DUP3"
+    },
+    "886": {
+      "op": "ADD"
+    },
+    "887": {
+      "op": "SUB"
+    },
+    "888": {
+      "op": "SWAP1"
+    },
+    "889": {
+      "op": "POP"
+    },
+    "890": {
+      "op": "SUB"
+    },
+    "891": {
+      "op": "CALLDATASIZE"
+    },
+    "892": {
+      "op": "DUP3"
+    },
+    "893": {
+      "op": "CALLDATACOPY"
+    },
+    "894": {
+      "op": "POP"
+    },
+    "895": {
+      "offset": [252, 270],
+      "op": "POP",
+      "path": "0"
+    },
+    "896": {
+      "offset": [252, 270],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "898": {
+      "offset": [252, 270],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x160"
+    },
+    "901": {
+      "offset": [252, 270],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "902": {
+      "offset": [252, 270],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "904": {
+      "offset": [252, 270],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x180"
+    },
+    "907": {
+      "offset": [252, 270],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "908": {
+      "offset": [252, 270],
+      "op": "ADD",
+      "path": "0"
+    },
+    "909": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "911": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "913": {
+      "op": "DUP3"
+    },
+    "914": {
+      "op": "SUB"
+    },
+    "915": {
+      "op": "MOD"
+    },
+    "916": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "918": {
+      "op": "DUP3"
+    },
+    "919": {
+      "op": "ADD"
+    },
+    "920": {
+      "op": "SUB"
+    },
+    "921": {
+      "op": "SWAP1"
+    },
+    "922": {
+      "op": "POP"
+    },
+    "923": {
+      "offset": [252, 270],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x160"
+    },
+    "926": {
+      "offset": [252, 270],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "927": {
+      "offset": [252, 270],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "928": {
+      "offset": [279, 297],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x95D89B41"
+    },
+    "933": {
+      "offset": [279, 297],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "934": {
+      "offset": [279, 297],
+      "op": "EQ",
+      "path": "0"
+    },
+    "935": {
+      "offset": [279, 297],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "936": {
+      "offset": [279, 297],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x43C"
+    },
+    "939": {
+      "offset": [279, 297],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "940": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "942": {
+      "offset": [279, 297],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "943": {
+      "offset": [279, 297],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x180"
+    },
+    "946": {
+      "offset": [279, 297],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "948": {
+      "offset": [279, 297],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "949": {
+      "offset": [279, 297],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "950": {
+      "offset": [279, 297],
+      "op": "ADD",
+      "path": "0"
+    },
+    "951": {
+      "offset": [279, 297],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x120"
+    },
+    "954": {
+      "offset": [279, 297],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "956": {
+      "offset": [279, 297],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "958": {
+      "offset": [279, 297],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "959": {
+      "offset": [279, 297],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "960": {
+      "offset": [279, 297],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "961": {
+      "offset": [279, 297],
+      "op": "ADD",
+      "path": "0"
+    },
+    "962": {
+      "offset": [279, 297],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "963": {
+      "offset": [279, 297],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "964": {
+      "offset": [279, 297],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x120"
+    },
+    "967": {
+      "offset": [279, 297],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "968": {
+      "offset": [279, 297],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "970": {
+      "offset": [279, 297],
+      "op": "MUL",
+      "path": "0"
+    },
+    "971": {
+      "offset": [279, 297],
+      "op": "GT",
+      "path": "0"
+    },
+    "972": {
+      "offset": [279, 297],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "973": {
+      "offset": [279, 297],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3D5"
+    },
+    "976": {
+      "offset": [279, 297],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "977": {
+      "offset": [279, 297],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3F7"
+    },
+    "980": {
+      "offset": [279, 297],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "981": {
+      "offset": [279, 297],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "982": {
+      "offset": [279, 297],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x120"
+    },
+    "985": {
+      "offset": [279, 297],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "986": {
+      "offset": [279, 297],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "987": {
+      "offset": [279, 297],
+      "op": "ADD",
+      "path": "0"
+    },
+    "988": {
+      "offset": [279, 297],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "989": {
+      "offset": [279, 297],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x120"
+    },
+    "992": {
+      "offset": [279, 297],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "993": {
+      "offset": [279, 297],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "995": {
+      "offset": [279, 297],
+      "op": "MUL",
+      "path": "0"
+    },
+    "996": {
+      "offset": [279, 297],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "997": {
+      "offset": [279, 297],
+      "op": "ADD",
+      "path": "0"
+    },
+    "998": {
+      "offset": [279, 297],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "999": {
+      "offset": [279, 297],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "1000": {
+      "offset": [279, 297],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "1001": {
+      "offset": [279, 297],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "1002": {
+      "offset": [279, 297],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "1004": {
+      "offset": [279, 297],
+      "op": "ADD",
+      "path": "0"
+    },
+    "1005": {
+      "offset": [279, 297],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "1006": {
+      "offset": [279, 297],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "1007": {
+      "offset": [279, 297],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "1008": {
+      "offset": [279, 297],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "1009": {
+      "offset": [279, 297],
+      "op": "EQ",
+      "path": "0"
+    },
+    "1010": {
+      "offset": [279, 297],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "1011": {
+      "offset": [279, 297],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3C2"
+    },
+    "1014": {
+      "offset": [279, 297],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "1015": {
+      "offset": [279, 297],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "1016": {
+      "offset": [279, 297],
+      "op": "POP",
+      "path": "0"
+    },
+    "1017": {
+      "offset": [279, 297],
+      "op": "POP",
+      "path": "0"
+    },
+    "1018": {
+      "offset": [279, 297],
+      "op": "POP",
+      "path": "0"
+    },
+    "1019": {
+      "offset": [279, 297],
+      "op": "POP",
+      "path": "0"
+    },
+    "1020": {
+      "offset": [279, 297],
+      "op": "POP",
+      "path": "0"
+    },
+    "1021": {
+      "offset": [279, 297],
+      "op": "POP",
+      "path": "0"
+    },
+    "1022": {
+      "op": "PUSH2",
+      "value": "0x180"
+    },
+    "1025": {
+      "op": "MLOAD"
+    },
+    "1026": {
+      "op": "DUP1"
+    },
+    "1027": {
+      "op": "PUSH2",
+      "value": "0x1A0"
+    },
+    "1030": {
+      "op": "ADD"
+    },
+    "1031": {
+      "op": "DUP2"
+    },
+    "1032": {
+      "op": "DUP3"
+    },
+    "1033": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1035": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1037": {
+      "op": "DUP3"
+    },
+    "1038": {
+      "op": "SUB"
+    },
+    "1039": {
+      "op": "MOD"
+    },
+    "1040": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1042": {
+      "op": "DUP3"
+    },
+    "1043": {
+      "op": "ADD"
+    },
+    "1044": {
+      "op": "SUB"
+    },
+    "1045": {
+      "op": "SWAP1"
+    },
+    "1046": {
+      "op": "POP"
+    },
+    "1047": {
+      "op": "SUB"
+    },
+    "1048": {
+      "op": "CALLDATASIZE"
+    },
+    "1049": {
+      "op": "DUP3"
+    },
+    "1050": {
+      "op": "CALLDATACOPY"
+    },
+    "1051": {
+      "op": "POP"
+    },
+    "1052": {
+      "offset": [279, 297],
+      "op": "POP",
+      "path": "0"
+    },
+    "1053": {
+      "offset": [279, 297],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "1055": {
+      "offset": [279, 297],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x160"
+    },
+    "1058": {
+      "offset": [279, 297],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "1059": {
+      "offset": [279, 297],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "1061": {
+      "offset": [279, 297],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x180"
+    },
+    "1064": {
+      "offset": [279, 297],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "1065": {
+      "offset": [279, 297],
+      "op": "ADD",
+      "path": "0"
+    },
+    "1066": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1068": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1070": {
+      "op": "DUP3"
+    },
+    "1071": {
+      "op": "SUB"
+    },
+    "1072": {
+      "op": "MOD"
+    },
+    "1073": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1075": {
+      "op": "DUP3"
+    },
+    "1076": {
+      "op": "ADD"
+    },
+    "1077": {
+      "op": "SUB"
+    },
+    "1078": {
+      "op": "SWAP1"
+    },
+    "1079": {
+      "op": "POP"
+    },
+    "1080": {
+      "offset": [279, 297],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x160"
+    },
+    "1083": {
+      "offset": [279, 297],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "1084": {
+      "offset": [279, 297],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "1085": {
+      "offset": [308, 323],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x313CE567"
+    },
+    "1090": {
+      "offset": [308, 323],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "1091": {
+      "offset": [308, 323],
+      "op": "EQ",
+      "path": "0"
+    },
+    "1092": {
+      "offset": [308, 323],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "1093": {
+      "offset": [308, 323],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x454"
+    },
+    "1096": {
+      "offset": [308, 323],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "1097": {
+      "op": "PUSH1",
+      "value": "0x7"
+    },
+    "1099": {
+      "offset": [308, 323],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "1100": {
+      "offset": [308, 323],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "1102": {
+      "offset": [308, 323],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "1103": {
+      "offset": [308, 323],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "1105": {
+      "offset": [308, 323],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "1107": {
+      "offset": [308, 323],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "1108": {
+      "offset": [308, 323],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "1109": {
+      "offset": [335, 368],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x70A08231"
+    },
+    "1114": {
+      "offset": [335, 368],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "1115": {
+      "offset": [335, 368],
+      "op": "EQ",
+      "path": "0"
+    },
+    "1116": {
+      "offset": [335, 368],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "1117": {
+      "offset": [335, 368],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x484"
+    },
+    "1120": {
+      "offset": [335, 368],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "1121": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "1123": {
+      "op": "CALLDATALOAD"
+    },
+    "1124": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "1126": {
+      "op": "SHR"
+    },
+    "1127": {
+      "offset": [335, 368],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x48C"
+    },
+    "1130": {
+      "offset": [335, 368],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "1131": {
+      "op": "PUSH1",
+      "value": "0x8"
+    },
+    "1133": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "1135": {
+      "op": "CALLDATALOAD"
+    },
+    "1136": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "1138": {
+      "op": "MSTORE"
+    },
+    "1139": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "1141": {
+      "op": "MSTORE"
+    },
+    "1142": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "1144": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "1146": {
+      "op": "SHA3"
+    },
+    "1147": {
+      "offset": [335, 368],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "1148": {
+      "offset": [335, 368],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "1150": {
+      "offset": [335, 368],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "1151": {
+      "offset": [335, 368],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "1153": {
+      "offset": [335, 368],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "1155": {
+      "offset": [335, 368],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "1156": {
+      "offset": [335, 368],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "1157": {
+      "op": "POP"
+    },
+    "1158": {
+      "op": "JUMPDEST"
+    },
+    "1159": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1161": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1163": {
+      "op": "REVERT"
+    },
+    "1164": {
+      "op": "JUMPDEST"
+    },
+    "1165": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1167": {
+      "op": "DUP1"
+    },
+    "1168": {
+      "op": "REVERT",
+      "optimizer_revert": true
+    }
+  },
+  "sha1": "87d796773592fc6c999624102f03db9b30a9ab07",
+  "source": "# @version ^0.2.0\n\"\"\"\n@notice Mock ERC20 for testing\n\"\"\"\n\nevent Transfer:\n    _from: indexed(address)\n    _to: indexed(address)\n    _value: uint256\n\nevent Approval:\n    _owner: indexed(address)\n    _spender: indexed(address)\n    _value: uint256\n\nname: public(String[64])\nsymbol: public(String[32])\ndecimals: public(uint256)\nbalanceOf: public(HashMap[address, uint256])\nallowances: HashMap[address, HashMap[address, uint256]]\ntotal_supply: uint256\n\n\n@external\ndef __init__(_name: String[64], _symbol: String[32], _decimals: uint256, _allocateTo: address[5]):\n    self.name = _name\n    self.symbol = _symbol\n    self.decimals = _decimals\n\n    for addr in _allocateTo:\n        self.balanceOf[addr] += 100000000000000000000000000\n\n\n@external\n@view\ndef totalSupply() -> uint256:\n    return self.total_supply\n\n\n@external\n@view\ndef allowance(_owner : address, _spender : address) -> uint256:\n    return self.allowances[_owner][_spender]\n\n\n@external\ndef transfer(_to : address, _value : uint256) -> bool:\n    self.balanceOf[msg.sender] -= _value\n    self.balanceOf[_to] += _value\n    log Transfer(msg.sender, _to, _value)\n    return True\n\n\n@external\ndef transferFrom(_from : address, _to : address, _value : uint256) -> bool:\n    self.balanceOf[_from] -= _value\n    self.balanceOf[_to] += _value\n    self.allowances[_from][msg.sender] -= _value\n    log Transfer(_from, _to, _value)\n    return True\n\n\n@external\ndef approve(_spender : address, _value : uint256) -> bool:\n    self.allowances[msg.sender][_spender] = _value\n    log Approval(msg.sender, _spender, _value)\n    return True\n\n\n@external\ndef mint_for_testing(_target: address, _value: uint256) -> bool:\n    self.total_supply += _value\n    self.balanceOf[_target] += _value\n    log Transfer(ZERO_ADDRESS, _target, _value)\n\n    return True\n",
+  "sourceMap": "",
+  "sourcePath": "contracts/ERC20Mock.vy",
+  "type": "contract"
+}

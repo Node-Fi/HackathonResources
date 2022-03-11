@@ -1,0 +1,4499 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "contract IStableSwap",
+          "name": "pool",
+          "type": "address"
+        }
+      ],
+      "name": "FeeClaimRevert",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "contract IStableSwap",
+          "name": "pool",
+          "type": "address"
+        }
+      ],
+      "name": "FeeClaimSuccess",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IStableSwap[]",
+          "name": "_pools",
+          "type": "address[]"
+        }
+      ],
+      "name": "addPools",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "claimFees",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "pools",
+      "outputs": [
+        {
+          "internalType": "contract IStableSwap",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "9": "contracts/FeeClaims.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/FeeClaims.sol",
+    "exportedSymbols": {
+      "FeeClaimer": [2155],
+      "IStableSwap": [2052]
+    },
+    "id": 2156,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2048,
+        "literals": ["solidity", "0.7", ".6"],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:9"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 2052,
+        "linearizedBaseContracts": [2052],
+        "name": "IStableSwap",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "30c54085",
+            "id": 2051,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw_admin_fees",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2049,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "81:2:9"
+            },
+            "returnParameters": {
+              "id": 2050,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "92:0:9"
+            },
+            "scope": 2052,
+            "src": "53:40:9",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2156,
+        "src": "25:70:9"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 2155,
+        "linearizedBaseContracts": [2155],
+        "name": "FeeClaimer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 2054,
+            "mutability": "mutable",
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 2155,
+            "src": "125:13:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2053,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "125:7:9",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "functionSelector": "ac4afa38",
+            "id": 2057,
+            "mutability": "mutable",
+            "name": "pools",
+            "nodeType": "VariableDeclaration",
+            "scope": 2155,
+            "src": "144:26:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_contract$_IStableSwap_$2052_$dyn_storage",
+              "typeString": "contract IStableSwap[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 2055,
+                "name": "IStableSwap",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 2052,
+                "src": "144:11:9",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                  "typeString": "contract IStableSwap"
+                }
+              },
+              "id": 2056,
+              "nodeType": "ArrayTypeName",
+              "src": "144:13:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_contract$_IStableSwap_$2052_$dyn_storage_ptr",
+                "typeString": "contract IStableSwap[]"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "id": 2061,
+            "name": "FeeClaimSuccess",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2060,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2059,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2061,
+                  "src": "199:16:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                    "typeString": "contract IStableSwap"
+                  },
+                  "typeName": {
+                    "id": 2058,
+                    "name": "IStableSwap",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 2052,
+                    "src": "199:11:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                      "typeString": "contract IStableSwap"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "198:18:9"
+            },
+            "src": "177:40:9"
+          },
+          {
+            "anonymous": false,
+            "id": 2065,
+            "name": "FeeClaimRevert",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2064,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2063,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "pool",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2065,
+                  "src": "243:16:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                    "typeString": "contract IStableSwap"
+                  },
+                  "typeName": {
+                    "id": 2062,
+                    "name": "IStableSwap",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 2052,
+                    "src": "243:11:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                      "typeString": "contract IStableSwap"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "242:18:9"
+            },
+            "src": "222:39:9"
+          },
+          {
+            "body": {
+              "id": 2073,
+              "nodeType": "Block",
+              "src": "288:35:9",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 2071,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 2068,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2054,
+                      "src": "298:5:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "expression": {
+                        "id": 2069,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "306:3:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 2070,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "src": "306:10:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "298:18:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2072,
+                  "nodeType": "ExpressionStatement",
+                  "src": "298:18:9"
+                }
+              ]
+            },
+            "id": 2074,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2066,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "278:2:9"
+            },
+            "returnParameters": {
+              "id": 2067,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "288:0:9"
+            },
+            "scope": 2155,
+            "src": "267:56:9",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2112,
+              "nodeType": "Block",
+              "src": "359:276:9",
+              "statements": [
+                {
+                  "body": {
+                    "id": 2110,
+                    "nodeType": "Block",
+                    "src": "409:220:9",
+                    "statements": [
+                      {
+                        "assignments": [2089],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 2089,
+                            "mutability": "mutable",
+                            "name": "pool",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 2110,
+                            "src": "423:16:9",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                              "typeString": "contract IStableSwap"
+                            },
+                            "typeName": {
+                              "id": 2088,
+                              "name": "IStableSwap",
+                              "nodeType": "UserDefinedTypeName",
+                              "referencedDeclaration": 2052,
+                              "src": "423:11:9",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                                "typeString": "contract IStableSwap"
+                              }
+                            },
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 2093,
+                        "initialValue": {
+                          "baseExpression": {
+                            "id": 2090,
+                            "name": "pools",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2057,
+                            "src": "442:5:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_contract$_IStableSwap_$2052_$dyn_storage",
+                              "typeString": "contract IStableSwap[] storage ref"
+                            }
+                          },
+                          "id": 2092,
+                          "indexExpression": {
+                            "id": 2091,
+                            "name": "i",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2078,
+                            "src": "448:1:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "442:8:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                            "typeString": "contract IStableSwap"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "423:27:9"
+                      },
+                      {
+                        "clauses": [
+                          {
+                            "block": {
+                              "id": 2101,
+                              "nodeType": "Block",
+                              "src": "495:59:9",
+                              "statements": [
+                                {
+                                  "eventCall": {
+                                    "arguments": [
+                                      {
+                                        "id": 2098,
+                                        "name": "pool",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 2089,
+                                        "src": "534:4:9",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                                          "typeString": "contract IStableSwap"
+                                        }
+                                      }
+                                    ],
+                                    "expression": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                                          "typeString": "contract IStableSwap"
+                                        }
+                                      ],
+                                      "id": 2097,
+                                      "name": "FeeClaimSuccess",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 2061,
+                                      "src": "518:15:9",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_IStableSwap_$2052_$returns$__$",
+                                        "typeString": "function (contract IStableSwap)"
+                                      }
+                                    },
+                                    "id": 2099,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": false,
+                                    "kind": "functionCall",
+                                    "lValueRequested": false,
+                                    "names": [],
+                                    "nodeType": "FunctionCall",
+                                    "src": "518:21:9",
+                                    "tryCall": false,
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_tuple$__$",
+                                      "typeString": "tuple()"
+                                    }
+                                  },
+                                  "id": 2100,
+                                  "nodeType": "EmitStatement",
+                                  "src": "513:26:9"
+                                }
+                              ]
+                            },
+                            "errorName": "",
+                            "id": 2102,
+                            "nodeType": "TryCatchClause",
+                            "src": "495:59:9"
+                          },
+                          {
+                            "block": {
+                              "id": 2107,
+                              "nodeType": "Block",
+                              "src": "561:58:9",
+                              "statements": [
+                                {
+                                  "eventCall": {
+                                    "arguments": [
+                                      {
+                                        "id": 2104,
+                                        "name": "pool",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 2089,
+                                        "src": "599:4:9",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                                          "typeString": "contract IStableSwap"
+                                        }
+                                      }
+                                    ],
+                                    "expression": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                                          "typeString": "contract IStableSwap"
+                                        }
+                                      ],
+                                      "id": 2103,
+                                      "name": "FeeClaimRevert",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 2065,
+                                      "src": "584:14:9",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_IStableSwap_$2052_$returns$__$",
+                                        "typeString": "function (contract IStableSwap)"
+                                      }
+                                    },
+                                    "id": 2105,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": false,
+                                    "kind": "functionCall",
+                                    "lValueRequested": false,
+                                    "names": [],
+                                    "nodeType": "FunctionCall",
+                                    "src": "584:20:9",
+                                    "tryCall": false,
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_tuple$__$",
+                                      "typeString": "tuple()"
+                                    }
+                                  },
+                                  "id": 2106,
+                                  "nodeType": "EmitStatement",
+                                  "src": "579:25:9"
+                                }
+                              ]
+                            },
+                            "errorName": "",
+                            "id": 2108,
+                            "nodeType": "TryCatchClause",
+                            "src": "555:64:9"
+                          }
+                        ],
+                        "externalCall": {
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "id": 2094,
+                              "name": "pool",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2089,
+                              "src": "468:4:9",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                                "typeString": "contract IStableSwap"
+                              }
+                            },
+                            "id": 2095,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "withdraw_admin_fees",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 2051,
+                            "src": "468:24:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                              "typeString": "function () external"
+                            }
+                          },
+                          "id": 2096,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "468:26:9",
+                          "tryCall": true,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 2109,
+                        "nodeType": "TryStatement",
+                        "src": "464:155:9"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2084,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 2081,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2078,
+                      "src": "386:1:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 2082,
+                        "name": "pools",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2057,
+                        "src": "390:5:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_contract$_IStableSwap_$2052_$dyn_storage",
+                          "typeString": "contract IStableSwap[] storage ref"
+                        }
+                      },
+                      "id": 2083,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "src": "390:12:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "386:16:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2111,
+                  "initializationExpression": {
+                    "assignments": [2078],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 2078,
+                        "mutability": "mutable",
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 2111,
+                        "src": "374:6:9",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 2077,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "374:4:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 2080,
+                    "initialValue": {
+                      "hexValue": "30",
+                      "id": 2079,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "383:1:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "374:10:9"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "id": 2086,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "404:3:9",
+                      "subExpression": {
+                        "id": 2085,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2078,
+                        "src": "404:1:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2087,
+                    "nodeType": "ExpressionStatement",
+                    "src": "404:3:9"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "369:260:9"
+                }
+              ]
+            },
+            "functionSelector": "d294f093",
+            "id": 2113,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimFees",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2075,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "347:2:9"
+            },
+            "returnParameters": {
+              "id": 2076,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "359:0:9"
+            },
+            "scope": 2155,
+            "src": "329:306:9",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2153,
+              "nodeType": "Block",
+              "src": "699:186:9",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 2123,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "expression": {
+                            "id": 2120,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "717:3:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 2121,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "717:10:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "id": 2122,
+                          "name": "owner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2054,
+                          "src": "731:5:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "717:19:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 2119,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [-18, -18],
+                      "referencedDeclaration": -18,
+                      "src": "709:7:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 2124,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "709:28:9",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2125,
+                  "nodeType": "ExpressionStatement",
+                  "src": "709:28:9"
+                },
+                {
+                  "body": {
+                    "id": 2151,
+                    "nodeType": "Block",
+                    "src": "788:91:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "expression": {
+                              "baseExpression": {
+                                "id": 2137,
+                                "name": "_pools",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 2116,
+                                "src": "802:6:9",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_contract$_IStableSwap_$2052_$dyn_calldata_ptr",
+                                  "typeString": "contract IStableSwap[] calldata"
+                                }
+                              },
+                              "id": 2139,
+                              "indexExpression": {
+                                "id": 2138,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 2127,
+                                "src": "809:1:9",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "802:9:9",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                                "typeString": "contract IStableSwap"
+                              }
+                            },
+                            "id": 2140,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "withdraw_admin_fees",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 2051,
+                            "src": "802:29:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                              "typeString": "function () external"
+                            }
+                          },
+                          "id": 2141,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "802:31:9",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 2142,
+                        "nodeType": "ExpressionStatement",
+                        "src": "802:31:9"
+                      },
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "baseExpression": {
+                                "id": 2146,
+                                "name": "_pools",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 2116,
+                                "src": "858:6:9",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_contract$_IStableSwap_$2052_$dyn_calldata_ptr",
+                                  "typeString": "contract IStableSwap[] calldata"
+                                }
+                              },
+                              "id": 2148,
+                              "indexExpression": {
+                                "id": 2147,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 2127,
+                                "src": "865:1:9",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "858:9:9",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                                "typeString": "contract IStableSwap"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                                "typeString": "contract IStableSwap"
+                              }
+                            ],
+                            "expression": {
+                              "id": 2143,
+                              "name": "pools",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2057,
+                              "src": "847:5:9",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_contract$_IStableSwap_$2052_$dyn_storage",
+                                "typeString": "contract IStableSwap[] storage ref"
+                              }
+                            },
+                            "id": 2145,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "src": "847:10:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_contract$_IStableSwap_$2052_$returns$__$",
+                              "typeString": "function (contract IStableSwap)"
+                            }
+                          },
+                          "id": 2149,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "847:21:9",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 2150,
+                        "nodeType": "ExpressionStatement",
+                        "src": "847:21:9"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2133,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 2130,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2127,
+                      "src": "764:1:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 2131,
+                        "name": "_pools",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2116,
+                        "src": "768:6:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_contract$_IStableSwap_$2052_$dyn_calldata_ptr",
+                          "typeString": "contract IStableSwap[] calldata"
+                        }
+                      },
+                      "id": 2132,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "src": "768:13:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "764:17:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2152,
+                  "initializationExpression": {
+                    "assignments": [2127],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 2127,
+                        "mutability": "mutable",
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 2152,
+                        "src": "752:6:9",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 2126,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "752:4:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 2129,
+                    "initialValue": {
+                      "hexValue": "30",
+                      "id": 2128,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "761:1:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "752:10:9"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "id": 2135,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "783:3:9",
+                      "subExpression": {
+                        "id": 2134,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2127,
+                        "src": "783:1:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2136,
+                    "nodeType": "ExpressionStatement",
+                    "src": "783:3:9"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "747:132:9"
+                }
+              ]
+            },
+            "functionSelector": "b36a4ab1",
+            "id": 2154,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addPools",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2117,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2116,
+                  "mutability": "mutable",
+                  "name": "_pools",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2154,
+                  "src": "659:29:9",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_contract$_IStableSwap_$2052_$dyn_calldata_ptr",
+                    "typeString": "contract IStableSwap[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2114,
+                      "name": "IStableSwap",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 2052,
+                      "src": "659:11:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IStableSwap_$2052",
+                        "typeString": "contract IStableSwap"
+                      }
+                    },
+                    "id": 2115,
+                    "nodeType": "ArrayTypeName",
+                    "src": "659:13:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_contract$_IStableSwap_$2052_$dyn_storage_ptr",
+                      "typeString": "contract IStableSwap[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "658:31:9"
+            },
+            "returnParameters": {
+              "id": 2118,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "699:0:9"
+            },
+            "scope": 2155,
+            "src": "641:244:9",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2156,
+        "src": "98:789:9"
+      }
+    ],
+    "src": "0:888:9"
+  },
+  "bytecode": "608060405234801561001057600080fd5b50600080546001600160a01b03191633179055610345806100326000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063ac4afa3814610046578063b36a4ab11461007f578063d294f093146100f1575b600080fd5b6100636004803603602081101561005c57600080fd5b50356100f9565b604080516001600160a01b039092168252519081900360200190f35b6100ef6004803603602081101561009557600080fd5b8101906020810181356401000000008111156100b057600080fd5b8201836020820111156100c257600080fd5b803590602001918460208302840111640100000000831117156100e457600080fd5b509092509050610123565b005b6100ef610209565b6001818154811061010957600080fd5b6000918252602090912001546001600160a01b0316905081565b6000546001600160a01b0316331461013a57600080fd5b60005b818110156102045782828281811061015157fe5b905060200201356001600160a01b03166001600160a01b03166330c540856040518163ffffffff1660e01b8152600401600060405180830381600087803b15801561019b57600080fd5b505af11580156101af573d6000803e3d6000fd5b5050505060018383838181106101c157fe5b835460018181018655600095865260209586902090910180546001600160a01b0319166001600160a01b039690930294909401359490941617909155500161013d565b505050565b60005b60015481101561030c5760006001828154811061022557fe5b6000918252602082200154604080516330c5408560e01b815290516001600160a01b03909216935083926330c540859260048084019382900301818387803b15801561027057600080fd5b505af1925050508015610281575060015b6102c657604080516001600160a01b038316815290517f82a9d8e92b39d35870f6192b03f1a9abd94c469cdee5341bbb66bf84e00028a19181900360200190a1610303565b604080516001600160a01b038316815290517f0a9a4ea520d59873f6c7d398e2030a6dff11002664af13a2adfc0fcad5a44c529181900360200190a15b5060010161020c565b5056fea2646970667358221220e82f9c15dd52b64208bc33090dd2600d901c8e197bea474dfe94d75d3cde488d64736f6c63430007060033",
+  "bytecodeSha1": "f5454cba1be33f2df3670592e6cec16fc011815c",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.7.6+commit.7338295f"
+  },
+  "contractName": "FeeClaimer",
+  "coverageMap": {
+    "branches": {
+      "9": {
+        "FeeClaimer.addPools": {
+          "7": [717, 736, true]
+        }
+      }
+    },
+    "statements": {
+      "9": {
+        "FeeClaimer.addPools": {
+          "0": [709, 737],
+          "1": [802, 833],
+          "2": [847, 868],
+          "3": [783, 786]
+        },
+        "FeeClaimer.claimFees": {
+          "4": [579, 604],
+          "5": [513, 539],
+          "6": [404, 407]
+        }
+      }
+    }
+  },
+  "dependencies": ["IStableSwap"],
+  "deployedBytecode": "608060405234801561001057600080fd5b50600436106100415760003560e01c8063ac4afa3814610046578063b36a4ab11461007f578063d294f093146100f1575b600080fd5b6100636004803603602081101561005c57600080fd5b50356100f9565b604080516001600160a01b039092168252519081900360200190f35b6100ef6004803603602081101561009557600080fd5b8101906020810181356401000000008111156100b057600080fd5b8201836020820111156100c257600080fd5b803590602001918460208302840111640100000000831117156100e457600080fd5b509092509050610123565b005b6100ef610209565b6001818154811061010957600080fd5b6000918252602090912001546001600160a01b0316905081565b6000546001600160a01b0316331461013a57600080fd5b60005b818110156102045782828281811061015157fe5b905060200201356001600160a01b03166001600160a01b03166330c540856040518163ffffffff1660e01b8152600401600060405180830381600087803b15801561019b57600080fd5b505af11580156101af573d6000803e3d6000fd5b5050505060018383838181106101c157fe5b835460018181018655600095865260209586902090910180546001600160a01b0319166001600160a01b039690930294909401359490941617909155500161013d565b505050565b60005b60015481101561030c5760006001828154811061022557fe5b6000918252602082200154604080516330c5408560e01b815290516001600160a01b03909216935083926330c540859260048084019382900301818387803b15801561027057600080fd5b505af1925050508015610281575060015b6102c657604080516001600160a01b038316815290517f82a9d8e92b39d35870f6192b03f1a9abd94c469cdee5341bbb66bf84e00028a19181900360200190a1610303565b604080516001600160a01b038316815290517f0a9a4ea520d59873f6c7d398e2030a6dff11002664af13a2adfc0fcad5a44c529181900360200190a15b5060010161020c565b5056fea2646970667358221220e82f9c15dd52b64208bc33090dd2600d901c8e197bea474dfe94d75d3cde488d64736f6c63430007060033",
+  "deployedSourceMap": "98:789:9:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;144:26;;;;;;;;;;;;;;;;-1:-1:-1;144:26:9;;:::i;:::-;;;;-1:-1:-1;;;;;144:26:9;;;;;;;;;;;;;;641:244;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;641:244:9;;-1:-1:-1;641:244:9;-1:-1:-1;641:244:9;:::i;:::-;;329:306;;;:::i;144:26::-;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;144:26:9;;-1:-1:-1;144:26:9;:::o;641:244::-;731:5;;-1:-1:-1;;;;;731:5:9;717:10;:19;709:28;;;;;;752:6;747:132;764:17;;;747:132;;;802:6;;809:1;802:9;;;;;;;;;;;;;-1:-1:-1;;;;;802:9:9;-1:-1:-1;;;;;802:29:9;;:31;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;847:5;858:6;;865:1;858:9;;;;;;;847:21;;;;;;;;-1:-1:-1;847:21:9;;;858:9;847:21;;;;;;;;;-1:-1:-1;;;;;;847:21:9;-1:-1:-1;;;;;858:9:9;;;;;;;;;;;;;847:21;;;;-1:-1:-1;783:3:9;747:132;;;;641:244;;:::o;329:306::-;374:6;369:260;390:5;:12;386:16;;369:260;;;423:16;442:5;448:1;442:8;;;;;;;;;;;;;;;;;468:26;;;-1:-1:-1;;;468:26:9;;;;-1:-1:-1;;;;;442:8:9;;;;-1:-1:-1;442:8:9;;468:24;;:26;;;;;;;;;;442:8;;468:26;;;;;;;;;;;;;;;;;;;;;;;;;464:155;;584:20;;;-1:-1:-1;;;;;584:20:9;;;;;;;;;;;;;;;464:155;;;518:21;;;-1:-1:-1;;;;;518:21:9;;;;;;;;;;;;;;;464:155;-1:-1:-1;404:3:9;;369:260;;;;329:306::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [98, 887],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0xAC4AFA38 EQ PUSH2 0x46 JUMPI DUP1 PUSH4 0xB36A4AB1 EQ PUSH2 0x7F JUMPI DUP1 PUSH4 0xD294F093 EQ PUSH2 0xF1 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x63 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH2 0x5C JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH2 0xF9 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0xEF PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH2 0x95 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 ADD SWAP1 PUSH1 0x20 DUP2 ADD DUP2 CALLDATALOAD PUSH5 0x100000000 DUP2 GT ISZERO PUSH2 0xB0 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP3 ADD DUP4 PUSH1 0x20 DUP3 ADD GT ISZERO PUSH2 0xC2 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 CALLDATALOAD SWAP1 PUSH1 0x20 ADD SWAP2 DUP5 PUSH1 0x20 DUP4 MUL DUP5 ADD GT PUSH5 0x100000000 DUP4 GT OR ISZERO PUSH2 0xE4 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP SWAP1 SWAP3 POP SWAP1 POP PUSH2 0x123 JUMP JUMPDEST STOP JUMPDEST PUSH2 0xEF PUSH2 0x209 JUMP JUMPDEST PUSH1 0x1 DUP2 DUP2 SLOAD DUP2 LT PUSH2 0x109 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 SWAP2 DUP3 MSTORE PUSH1 0x20 SWAP1 SWAP2 KECCAK256 ADD SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND SWAP1 POP DUP2 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND CALLER EQ PUSH2 0x13A JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 JUMPDEST DUP2 DUP2 LT ISZERO PUSH2 0x204 JUMPI DUP3 DUP3 DUP3 DUP2 DUP2 LT PUSH2 0x151 JUMPI INVALID JUMPDEST SWAP1 POP PUSH1 0x20 MUL ADD CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH4 0x30C54085 PUSH1 0x40 MLOAD DUP2 PUSH4 0xFFFFFFFF AND PUSH1 0xE0 SHL DUP2 MSTORE PUSH1 0x4 ADD PUSH1 0x0 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 PUSH1 0x0 DUP8 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH2 0x19B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL ISZERO DUP1 ISZERO PUSH2 0x1AF JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP PUSH1 0x1 DUP4 DUP4 DUP4 DUP2 DUP2 LT PUSH2 0x1C1 JUMPI INVALID JUMPDEST DUP4 SLOAD PUSH1 0x1 DUP2 DUP2 ADD DUP7 SSTORE PUSH1 0x0 SWAP6 DUP7 MSTORE PUSH1 0x20 SWAP6 DUP7 SWAP1 KECCAK256 SWAP1 SWAP2 ADD DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB NOT AND PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP7 SWAP1 SWAP4 MUL SWAP5 SWAP1 SWAP5 ADD CALLDATALOAD SWAP5 SWAP1 SWAP5 AND OR SWAP1 SWAP2 SSTORE POP ADD PUSH2 0x13D JUMP JUMPDEST POP POP POP JUMP JUMPDEST PUSH1 0x0 JUMPDEST PUSH1 0x1 SLOAD DUP2 LT ISZERO PUSH2 0x30C JUMPI PUSH1 0x0 PUSH1 0x1 DUP3 DUP2 SLOAD DUP2 LT PUSH2 0x225 JUMPI INVALID JUMPDEST PUSH1 0x0 SWAP2 DUP3 MSTORE PUSH1 0x20 DUP3 KECCAK256 ADD SLOAD PUSH1 0x40 DUP1 MLOAD PUSH4 0x30C54085 PUSH1 0xE0 SHL DUP2 MSTORE SWAP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND SWAP4 POP DUP4 SWAP3 PUSH4 0x30C54085 SWAP3 PUSH1 0x4 DUP1 DUP5 ADD SWAP4 DUP3 SWAP1 SUB ADD DUP2 DUP4 DUP8 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH2 0x270 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL SWAP3 POP POP POP DUP1 ISZERO PUSH2 0x281 JUMPI POP PUSH1 0x1 JUMPDEST PUSH2 0x2C6 JUMPI PUSH1 0x40 DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP4 AND DUP2 MSTORE SWAP1 MLOAD PUSH32 0x82A9D8E92B39D35870F6192B03F1A9ABD94C469CDEE5341BBB66BF84E00028A1 SWAP2 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 LOG1 PUSH2 0x303 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP4 AND DUP2 MSTORE SWAP1 MLOAD PUSH32 0xA9A4EA520D59873F6C7D398E2030A6DFF11002664AF13A2ADFC0FCAD5A44C52 SWAP2 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 LOG1 JUMPDEST POP PUSH1 0x1 ADD PUSH2 0x20C JUMP JUMPDEST POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xE8 0x2F SWAP13 ISZERO 0xDD MSTORE 0xB6 TIMESTAMP ADDMOD 0xBC CALLER MULMOD 0xD 0xD2 PUSH1 0xD SWAP1 SHR DUP15 NOT PUSH28 0xEA474DFE94D75D3CDE488D64736F6C63430007060033000000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [98, 887],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "MSTORE",
+      "path": "9"
+    },
+    "5": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "CALLVALUE",
+      "path": "9"
+    },
+    "6": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "7": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "8": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "12": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [98, 887],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "16": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "17": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "POP",
+      "path": "9"
+    },
+    "18": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "CALLDATASIZE",
+      "path": "9"
+    },
+    "21": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "LT",
+      "path": "9"
+    },
+    "22": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x41"
+    },
+    "25": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "26": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "CALLDATALOAD",
+      "path": "9"
+    },
+    "29": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "SHR",
+      "path": "9"
+    },
+    "32": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "33": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH4",
+      "path": "9",
+      "value": "0xAC4AFA38"
+    },
+    "38": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "EQ",
+      "path": "9"
+    },
+    "39": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x46"
+    },
+    "42": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "43": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "44": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH4",
+      "path": "9",
+      "value": "0xB36A4AB1"
+    },
+    "49": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "EQ",
+      "path": "9"
+    },
+    "50": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x7F"
+    },
+    "53": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "54": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "55": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH4",
+      "path": "9",
+      "value": "0xD294F093"
+    },
+    "60": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "EQ",
+      "path": "9"
+    },
+    "61": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0xF1"
+    },
+    "64": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "65": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "66": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "68": {
+      "fn": null,
+      "offset": [98, 887],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "69": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [98, 887],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "70": {
+      "offset": [144, 170],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "71": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x63"
+    },
+    "74": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x4"
+    },
+    "76": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "77": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "CALLDATASIZE",
+      "path": "9"
+    },
+    "78": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "SUB",
+      "path": "9"
+    },
+    "79": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "81": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "82": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "LT",
+      "path": "9"
+    },
+    "83": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "84": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x5C"
+    },
+    "87": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "88": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "90": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "91": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "92": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "93": {
+      "op": "POP"
+    },
+    "94": {
+      "offset": [144, 170],
+      "op": "CALLDATALOAD",
+      "path": "9"
+    },
+    "95": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0xF9"
+    },
+    "98": {
+      "fn": null,
+      "jump": "i",
+      "offset": [144, 170],
+      "op": "JUMP",
+      "path": "9"
+    },
+    "99": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "100": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x40"
+    },
+    "102": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "103": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "104": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "106": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "108": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "110": {
+      "op": "SHL"
+    },
+    "111": {
+      "op": "SUB"
+    },
+    "112": {
+      "offset": [144, 170],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "113": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "SWAP3",
+      "path": "9"
+    },
+    "114": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "AND",
+      "path": "9"
+    },
+    "115": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "116": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "MSTORE",
+      "path": "9"
+    },
+    "117": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "118": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "119": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "120": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "121": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "SUB",
+      "path": "9"
+    },
+    "122": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "124": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "ADD",
+      "path": "9"
+    },
+    "125": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "126": {
+      "fn": null,
+      "offset": [144, 170],
+      "op": "RETURN",
+      "path": "9"
+    },
+    "127": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "128": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0xEF"
+    },
+    "131": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x4"
+    },
+    "133": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "134": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "CALLDATASIZE",
+      "path": "9"
+    },
+    "135": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "SUB",
+      "path": "9"
+    },
+    "136": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "138": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "139": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "LT",
+      "path": "9"
+    },
+    "140": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "141": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x95"
+    },
+    "144": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "145": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "147": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "148": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "149": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "150": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "151": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "ADD",
+      "path": "9"
+    },
+    "152": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "153": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "155": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "156": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "ADD",
+      "path": "9"
+    },
+    "157": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "158": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "CALLDATALOAD",
+      "path": "9"
+    },
+    "159": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH5",
+      "path": "9",
+      "value": "0x100000000"
+    },
+    "165": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "166": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "GT",
+      "path": "9"
+    },
+    "167": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "168": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0xB0"
+    },
+    "171": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "172": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "174": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "175": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "176": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "177": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "178": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "ADD",
+      "path": "9"
+    },
+    "179": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "180": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "182": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "183": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "ADD",
+      "path": "9"
+    },
+    "184": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "GT",
+      "path": "9"
+    },
+    "185": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "186": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0xC2"
+    },
+    "189": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "190": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "192": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "193": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "194": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "195": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "196": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "CALLDATALOAD",
+      "path": "9"
+    },
+    "197": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "198": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "200": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "ADD",
+      "path": "9"
+    },
+    "201": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "SWAP2",
+      "path": "9"
+    },
+    "202": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP5",
+      "path": "9"
+    },
+    "203": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "205": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "206": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "MUL",
+      "path": "9"
+    },
+    "207": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP5",
+      "path": "9"
+    },
+    "208": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "ADD",
+      "path": "9"
+    },
+    "209": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "GT",
+      "path": "9"
+    },
+    "210": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH5",
+      "path": "9",
+      "value": "0x100000000"
+    },
+    "216": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "217": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "GT",
+      "path": "9"
+    },
+    "218": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "OR",
+      "path": "9"
+    },
+    "219": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "220": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0xE4"
+    },
+    "223": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "224": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "226": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "227": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "228": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "229": {
+      "op": "POP"
+    },
+    "230": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "231": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "SWAP3",
+      "path": "9"
+    },
+    "232": {
+      "op": "POP"
+    },
+    "233": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "234": {
+      "op": "POP"
+    },
+    "235": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x123"
+    },
+    "238": {
+      "fn": "FeeClaimer.addPools",
+      "jump": "i",
+      "offset": [641, 885],
+      "op": "JUMP",
+      "path": "9"
+    },
+    "239": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "240": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "STOP",
+      "path": "9"
+    },
+    "241": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [329, 635],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "242": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [329, 635],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0xEF"
+    },
+    "245": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [329, 635],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x209"
+    },
+    "248": {
+      "fn": "FeeClaimer.claimFees",
+      "jump": "i",
+      "offset": [329, 635],
+      "op": "JUMP",
+      "path": "9"
+    },
+    "249": {
+      "offset": [144, 170],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "250": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x1"
+    },
+    "252": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "253": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "254": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "SLOAD",
+      "path": "9"
+    },
+    "255": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "256": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "LT",
+      "path": "9"
+    },
+    "257": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x109"
+    },
+    "260": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "261": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "263": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "264": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "265": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "266": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "268": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "SWAP2",
+      "path": "9"
+    },
+    "269": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "270": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "MSTORE",
+      "path": "9"
+    },
+    "271": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "273": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "274": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "SWAP2",
+      "path": "9"
+    },
+    "275": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "KECCAK256",
+      "path": "9"
+    },
+    "276": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "ADD",
+      "path": "9"
+    },
+    "277": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "SLOAD",
+      "path": "9"
+    },
+    "278": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "280": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "282": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "284": {
+      "op": "SHL"
+    },
+    "285": {
+      "op": "SUB"
+    },
+    "286": {
+      "offset": [144, 170],
+      "op": "AND",
+      "path": "9"
+    },
+    "287": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [144, 170],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "288": {
+      "op": "POP"
+    },
+    "289": {
+      "offset": [144, 170],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "290": {
+      "fn": "FeeClaimer.claimFees",
+      "jump": "o",
+      "offset": [144, 170],
+      "op": "JUMP",
+      "path": "9"
+    },
+    "291": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "292": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [731, 736],
+      "op": "PUSH1",
+      "path": "9",
+      "statement": 0,
+      "value": "0x0"
+    },
+    "294": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [731, 736],
+      "op": "SLOAD",
+      "path": "9"
+    },
+    "295": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "297": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "299": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "301": {
+      "op": "SHL"
+    },
+    "302": {
+      "op": "SUB"
+    },
+    "303": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [731, 736],
+      "op": "AND",
+      "path": "9"
+    },
+    "304": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [717, 727],
+      "op": "CALLER",
+      "path": "9"
+    },
+    "305": {
+      "branch": 7,
+      "fn": "FeeClaimer.addPools",
+      "offset": [717, 736],
+      "op": "EQ",
+      "path": "9"
+    },
+    "306": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [709, 737],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x13A"
+    },
+    "309": {
+      "branch": 7,
+      "fn": "FeeClaimer.addPools",
+      "offset": [709, 737],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "310": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [709, 737],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "312": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [709, 737],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "313": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [709, 737],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "314": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [709, 737],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "315": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [752, 758],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "317": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [747, 879],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "318": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [764, 781],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "319": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [764, 781],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "320": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [764, 781],
+      "op": "LT",
+      "path": "9"
+    },
+    "321": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [747, 879],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "322": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [747, 879],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x204"
+    },
+    "325": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [747, 879],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "326": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 808],
+      "op": "DUP3",
+      "path": "9",
+      "statement": 1
+    },
+    "327": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 808],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "328": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [809, 810],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "329": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "330": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "331": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "LT",
+      "path": "9"
+    },
+    "332": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x151"
+    },
+    "335": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "336": {
+      "dev": "Index out of range",
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "INVALID",
+      "path": "9"
+    },
+    "337": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "338": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "339": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "POP",
+      "path": "9"
+    },
+    "340": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "342": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "MUL",
+      "path": "9"
+    },
+    "343": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "ADD",
+      "path": "9"
+    },
+    "344": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "CALLDATALOAD",
+      "path": "9"
+    },
+    "345": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "347": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "349": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "351": {
+      "op": "SHL"
+    },
+    "352": {
+      "op": "SUB"
+    },
+    "353": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 811],
+      "op": "AND",
+      "path": "9"
+    },
+    "354": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "356": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "358": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "360": {
+      "op": "SHL"
+    },
+    "361": {
+      "op": "SUB"
+    },
+    "362": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 831],
+      "op": "AND",
+      "path": "9"
+    },
+    "363": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 831],
+      "op": "PUSH4",
+      "path": "9",
+      "value": "0x30C54085"
+    },
+    "368": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x40"
+    },
+    "370": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "371": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "372": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "PUSH4",
+      "path": "9",
+      "value": "0xFFFFFFFF"
+    },
+    "377": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "AND",
+      "path": "9"
+    },
+    "378": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0xE0"
+    },
+    "380": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "SHL",
+      "path": "9"
+    },
+    "381": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "382": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "MSTORE",
+      "path": "9"
+    },
+    "383": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x4"
+    },
+    "385": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "ADD",
+      "path": "9"
+    },
+    "386": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "388": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x40"
+    },
+    "390": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "391": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "392": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "393": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "SUB",
+      "path": "9"
+    },
+    "394": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "395": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "397": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "DUP8",
+      "path": "9"
+    },
+    "398": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "399": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "EXTCODESIZE",
+      "path": "9"
+    },
+    "400": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "401": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "402": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "403": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x19B"
+    },
+    "406": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "407": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "409": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "410": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "411": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "412": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "POP",
+      "path": "9"
+    },
+    "413": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "GAS",
+      "path": "9"
+    },
+    "414": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "CALL",
+      "path": "9"
+    },
+    "415": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "416": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "417": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "418": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x1AF"
+    },
+    "421": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "422": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "RETURNDATASIZE",
+      "path": "9"
+    },
+    "423": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "425": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "426": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "RETURNDATACOPY",
+      "path": "9"
+    },
+    "427": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "RETURNDATASIZE",
+      "path": "9"
+    },
+    "428": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "430": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "431": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "432": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "POP",
+      "path": "9"
+    },
+    "433": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "POP",
+      "path": "9"
+    },
+    "434": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "POP",
+      "path": "9"
+    },
+    "435": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [802, 833],
+      "op": "POP",
+      "path": "9"
+    },
+    "436": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 852],
+      "op": "PUSH1",
+      "path": "9",
+      "statement": 2,
+      "value": "0x1"
+    },
+    "438": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 864],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "439": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 864],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "440": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [865, 866],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "441": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "442": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "443": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "LT",
+      "path": "9"
+    },
+    "444": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x1C1"
+    },
+    "447": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "448": {
+      "dev": "Index out of range",
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "INVALID",
+      "path": "9"
+    },
+    "449": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "450": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "451": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "SLOAD",
+      "path": "9"
+    },
+    "452": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x1"
+    },
+    "454": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "455": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "456": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "ADD",
+      "path": "9"
+    },
+    "457": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "DUP7",
+      "path": "9"
+    },
+    "458": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "SSTORE",
+      "path": "9"
+    },
+    "459": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "461": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "SWAP6",
+      "path": "9"
+    },
+    "462": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "DUP7",
+      "path": "9"
+    },
+    "463": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "MSTORE",
+      "path": "9"
+    },
+    "464": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "466": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "SWAP6",
+      "path": "9"
+    },
+    "467": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "DUP7",
+      "path": "9"
+    },
+    "468": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "469": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "KECCAK256",
+      "path": "9"
+    },
+    "470": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "471": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "SWAP2",
+      "path": "9"
+    },
+    "472": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "ADD",
+      "path": "9"
+    },
+    "473": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "474": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "SLOAD",
+      "path": "9"
+    },
+    "475": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "477": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "479": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "481": {
+      "op": "SHL"
+    },
+    "482": {
+      "op": "SUB"
+    },
+    "483": {
+      "op": "NOT"
+    },
+    "484": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "AND",
+      "path": "9"
+    },
+    "485": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "487": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "489": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "491": {
+      "op": "SHL"
+    },
+    "492": {
+      "op": "SUB"
+    },
+    "493": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "SWAP7",
+      "path": "9"
+    },
+    "494": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "495": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "SWAP4",
+      "path": "9"
+    },
+    "496": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "MUL",
+      "path": "9"
+    },
+    "497": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "SWAP5",
+      "path": "9"
+    },
+    "498": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "499": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "SWAP5",
+      "path": "9"
+    },
+    "500": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "ADD",
+      "path": "9"
+    },
+    "501": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "CALLDATALOAD",
+      "path": "9"
+    },
+    "502": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "SWAP5",
+      "path": "9"
+    },
+    "503": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "504": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "SWAP5",
+      "path": "9"
+    },
+    "505": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [858, 867],
+      "op": "AND",
+      "path": "9"
+    },
+    "506": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "OR",
+      "path": "9"
+    },
+    "507": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "508": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "SWAP2",
+      "path": "9"
+    },
+    "509": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [847, 868],
+      "op": "SSTORE",
+      "path": "9"
+    },
+    "510": {
+      "op": "POP"
+    },
+    "511": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [783, 786],
+      "op": "ADD",
+      "path": "9",
+      "statement": 3
+    },
+    "512": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [747, 879],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x13D"
+    },
+    "515": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [747, 879],
+      "op": "JUMP",
+      "path": "9"
+    },
+    "516": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [747, 879],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "517": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [747, 879],
+      "op": "POP",
+      "path": "9"
+    },
+    "518": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "POP",
+      "path": "9"
+    },
+    "519": {
+      "fn": "FeeClaimer.addPools",
+      "offset": [641, 885],
+      "op": "POP",
+      "path": "9"
+    },
+    "520": {
+      "fn": "FeeClaimer.addPools",
+      "jump": "o",
+      "offset": [641, 885],
+      "op": "JUMP",
+      "path": "9"
+    },
+    "521": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [329, 635],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "522": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [374, 380],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "524": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [369, 629],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "525": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [390, 395],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x1"
+    },
+    "527": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [390, 402],
+      "op": "SLOAD",
+      "path": "9"
+    },
+    "528": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [386, 402],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "529": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [386, 402],
+      "op": "LT",
+      "path": "9"
+    },
+    "530": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [369, 629],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "531": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [369, 629],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x30C"
+    },
+    "534": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [369, 629],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "535": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [423, 439],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "537": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 447],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x1"
+    },
+    "539": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [448, 449],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "540": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "541": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "SLOAD",
+      "path": "9"
+    },
+    "542": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "543": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "LT",
+      "path": "9"
+    },
+    "544": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x225"
+    },
+    "547": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "548": {
+      "dev": "Index out of range",
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "INVALID",
+      "path": "9"
+    },
+    "549": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "550": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "552": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "SWAP2",
+      "path": "9"
+    },
+    "553": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "554": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "MSTORE",
+      "path": "9"
+    },
+    "555": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "557": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "558": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "KECCAK256",
+      "path": "9"
+    },
+    "559": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "ADD",
+      "path": "9"
+    },
+    "560": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "SLOAD",
+      "path": "9"
+    },
+    "561": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x40"
+    },
+    "563": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "564": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "565": {
+      "op": "PUSH4",
+      "value": "0x30C54085"
+    },
+    "570": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "572": {
+      "op": "SHL"
+    },
+    "573": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "574": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "MSTORE",
+      "path": "9"
+    },
+    "575": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "576": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "577": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "579": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "581": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "583": {
+      "op": "SHL"
+    },
+    "584": {
+      "op": "SUB"
+    },
+    "585": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "586": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "SWAP3",
+      "path": "9"
+    },
+    "587": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "AND",
+      "path": "9"
+    },
+    "588": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "SWAP4",
+      "path": "9"
+    },
+    "589": {
+      "op": "POP"
+    },
+    "590": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "591": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "SWAP3",
+      "path": "9"
+    },
+    "592": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 492],
+      "op": "PUSH4",
+      "path": "9",
+      "value": "0x30C54085"
+    },
+    "597": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 492],
+      "op": "SWAP3",
+      "path": "9"
+    },
+    "598": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x4"
+    },
+    "600": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "601": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "DUP5",
+      "path": "9"
+    },
+    "602": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "ADD",
+      "path": "9"
+    },
+    "603": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "SWAP4",
+      "path": "9"
+    },
+    "604": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "605": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "606": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "SUB",
+      "path": "9"
+    },
+    "607": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "ADD",
+      "path": "9"
+    },
+    "608": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "609": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "610": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [442, 450],
+      "op": "DUP8",
+      "path": "9"
+    },
+    "611": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "612": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "EXTCODESIZE",
+      "path": "9"
+    },
+    "613": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "614": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "615": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "616": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x270"
+    },
+    "619": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "620": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "622": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "623": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "624": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "625": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "POP",
+      "path": "9"
+    },
+    "626": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "GAS",
+      "path": "9"
+    },
+    "627": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "CALL",
+      "path": "9"
+    },
+    "628": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "SWAP3",
+      "path": "9"
+    },
+    "629": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "POP",
+      "path": "9"
+    },
+    "630": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "POP",
+      "path": "9"
+    },
+    "631": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "POP",
+      "path": "9"
+    },
+    "632": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "633": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "634": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x281"
+    },
+    "637": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "638": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "POP",
+      "path": "9"
+    },
+    "639": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x1"
+    },
+    "641": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [468, 494],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "642": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [464, 619],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x2C6"
+    },
+    "645": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [464, 619],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "646": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "PUSH1",
+      "path": "9",
+      "statement": 4,
+      "value": "0x40"
+    },
+    "648": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "649": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "650": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "652": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "654": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "656": {
+      "op": "SHL"
+    },
+    "657": {
+      "op": "SUB"
+    },
+    "658": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "659": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "AND",
+      "path": "9"
+    },
+    "660": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "661": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "MSTORE",
+      "path": "9"
+    },
+    "662": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "663": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "664": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "PUSH32",
+      "path": "9",
+      "value": "0x82A9D8E92B39D35870F6192B03F1A9ABD94C469CDEE5341BBB66BF84E00028A1"
+    },
+    "697": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "SWAP2",
+      "path": "9"
+    },
+    "698": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "699": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "700": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "SUB",
+      "path": "9"
+    },
+    "701": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "703": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "ADD",
+      "path": "9"
+    },
+    "704": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "705": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [584, 604],
+      "op": "LOG1",
+      "path": "9"
+    },
+    "706": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [464, 619],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x303"
+    },
+    "709": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [464, 619],
+      "op": "JUMP",
+      "path": "9"
+    },
+    "710": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [464, 619],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "711": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "PUSH1",
+      "path": "9",
+      "statement": 5,
+      "value": "0x40"
+    },
+    "713": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "714": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "715": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "717": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "719": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "721": {
+      "op": "SHL"
+    },
+    "722": {
+      "op": "SUB"
+    },
+    "723": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "724": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "AND",
+      "path": "9"
+    },
+    "725": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "726": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "MSTORE",
+      "path": "9"
+    },
+    "727": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "728": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "729": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "PUSH32",
+      "path": "9",
+      "value": "0xA9A4EA520D59873F6C7D398E2030A6DFF11002664AF13A2ADFC0FCAD5A44C52"
+    },
+    "762": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "SWAP2",
+      "path": "9"
+    },
+    "763": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "764": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "765": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "SUB",
+      "path": "9"
+    },
+    "766": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "768": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "ADD",
+      "path": "9"
+    },
+    "769": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "770": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [518, 539],
+      "op": "LOG1",
+      "path": "9"
+    },
+    "771": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [464, 619],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "772": {
+      "op": "POP"
+    },
+    "773": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [404, 407],
+      "op": "PUSH1",
+      "path": "9",
+      "statement": 6,
+      "value": "0x1"
+    },
+    "775": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [404, 407],
+      "op": "ADD",
+      "path": "9"
+    },
+    "776": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [369, 629],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x20C"
+    },
+    "779": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [369, 629],
+      "op": "JUMP",
+      "path": "9"
+    },
+    "780": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [369, 629],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "781": {
+      "fn": "FeeClaimer.claimFees",
+      "offset": [369, 629],
+      "op": "POP",
+      "path": "9"
+    },
+    "782": {
+      "fn": "FeeClaimer.claimFees",
+      "jump": "o",
+      "offset": [329, 635],
+      "op": "JUMP",
+      "path": "9"
+    }
+  },
+  "sha1": "9cb9c14732bc35737344347592cef880fdf43606",
+  "source": "pragma solidity 0.7.6;\n\n\ninterface IStableSwap {\n    function withdraw_admin_fees() external;\n}\n\n\ncontract FeeClaimer {\n\n    address owner;\n    IStableSwap[] public pools;\n\n    event FeeClaimSuccess(IStableSwap pool);\n    event FeeClaimRevert(IStableSwap pool);\n\n    constructor() public {\n        owner = msg.sender;\n    }\n\n    function claimFees() external {\n        for (uint i = 0; i < pools.length; i++) {\n            IStableSwap pool = pools[i];\n            try pool.withdraw_admin_fees() {\n                emit FeeClaimSuccess(pool);\n            } catch {\n                emit FeeClaimRevert(pool);\n            }\n        }\n    }\n\n    function addPools(IStableSwap[] calldata _pools) external {\n        require(msg.sender == owner);\n        for (uint i = 0; i < _pools.length; i++) {\n            _pools[i].withdraw_admin_fees();\n            pools.push(_pools[i]);\n        }\n    }\n}\n",
+  "sourceMap": "98:789:9:-:0;;;267:56;;;;;;;;;-1:-1:-1;298:5:9;:18;;-1:-1:-1;;;;;;298:18:9;306:10;298:18;;;98:789;;;;;;",
+  "sourcePath": "contracts/FeeClaims.sol",
+  "type": "contract"
+}
