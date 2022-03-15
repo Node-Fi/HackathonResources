@@ -12,7 +12,7 @@ Made to support hackers at Node's [Berkeley Blockchain Hackathon](https://thenod
 * [GitHub](https://github.com/celo-org/celo-progressive-dapp-starter)
 * ➡️ [Tutorial](https://joenyzio.medium.com/build-celo-dapps-in-15-minutes-or-less-438ea954d0b1)
 
-**[Documentation](https://docs.celo.org/)**   |   **[Developer Guide](https://docs.celo.org/developer-guide/overview)**   |   **[Code Examples](https://docs.celo.org/developer-guide/start)**   |   **[Celo CLI](https://docs.celo.org/command-line-interface/introduction) **
+**[Documentation](https://docs.celo.org/)**   |   **[Developer Guide](https://docs.celo.org/developer-guide/overview)**   |   **[Code Examples](https://docs.celo.org/developer-guide/start)**   |   **[Celo CLI](https://docs.celo.org/command-line-interface/introduction)**
 
 
 ## **🌱  Impact**
