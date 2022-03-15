@@ -138,7 +138,6 @@ Made to support hackers at Node's [Berkeley Blockchain Hackathon](https://thenod
 
 * [GitHub](https://github.com/beefyfinance)
 * [Contracts](https://docs.beefy.com/additional-resources/code-repositories)
-* Relevant function calls
 
 **[Revo Market](https://revo.market/#/)** - an auto-compound protocol for yield farmers.
 
@@ -146,7 +145,6 @@ Made to support hackers at Node's [Berkeley Blockchain Hackathon](https://thenod
 
 * [GitHub](https://github.com/revo-market)
 * [Contracts](https://docs.revo.market/dyor/contracts)
-* Relevant function calls
 
 
 ## **🆔  Identity**
