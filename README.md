@@ -5,14 +5,23 @@ Made to support hackers at Node's [Berkeley Blockchain Hackathon](https://thenod
 
 ## **🌐  Celo Blockchain**
 
-**[Celo Dapp Starter Kit](https://github.com/celo-org/celo-progressive-dapp-starter)**
 
+Getting Started: 
+* [Metamask Set-up](https://docs.celo.org/getting-started/wallets/using-metamask-with-celo)
+* **[Celo Dapp Starter Kit](https://github.com/celo-org/celo-progressive-dapp-starter)**
+  * [GitHub](https://github.com/celo-org/celo-progressive-dapp-starter)
+  * ➡️ [Tutorial](https://joenyzio.medium.com/build-celo-dapps-in-15-minutes-or-less-438ea954d0b1)
 
+Developer Resources: 
+* [Documentation](https://docs.celo.org/)
+* [Developer Guide](https://docs.celo.org/developer-guide/overview)
+* [Code Examples](https://docs.celo.org/developer-guide/start) 
 
-* [GitHub](https://github.com/celo-org/celo-progressive-dapp-starter)
-* ➡️ [Tutorial](https://joenyzio.medium.com/build-celo-dapps-in-15-minutes-or-less-438ea954d0b1)
-
-**[Documentation](https://docs.celo.org/)**   |   **[Developer Guide](https://docs.celo.org/developer-guide/overview)**   |   **[Code Examples](https://docs.celo.org/developer-guide/start)**   |   **[Celo CLI](https://docs.celo.org/command-line-interface/introduction)**   | **[Alfajores Testnet Faucet](https://celo.org/developers/faucet)**
+Tools: 
+* [Celo SDKs](https://docs.celo.org/developer-guide/contractkit)
+* [Alfajores Testnet Faucet](https://celo.org/developers/faucet)
+* [Block Explorer](https://explorer.celo.org/)
+* [Celo CLI](https://docs.celo.org/command-line-interface/introduction)
 
 
 ## **🌱  Impact**
