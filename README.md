@@ -177,3 +177,21 @@ Made to support hackers at Node's [Berkeley Blockchain Hackathon](https://thenod
 * [GitHub](https://github.com/allbridge-io)
 * [Contracts](https://docs.allbridge.io/allbridge-overview/bridge-contracts)
 * [How it works](https://docs.allbridge.io/allbridge-overview/under-the-hood-of-allbridge)
+
+
+💵  Cash-in/out
+---------------
+
+[Ramp](https://ramp.network/) - a React Native SDK and API for cash-in/out. Primarily focused on the European and North American markets. Zero fees cash-in/out for Celo projects!
+
+-   [Documentation](https://docs.ramp.network/)
+
+-   [React Native SDK](https://docs.ramp.network/mobile/react-native-sdk/)
+
+[Bidali](https://www.bidali.com/) - a global crypto cash-out rail that leverages gift cards. No KYC required, so anyone can use it (even those without a government issued ID).
+
+-   Contact Eric @ Node to learn more
+
+[Simplex](https://www.simplex.com/) - a global cash-in/out rail that supports most Celo assets and most FIAT currencies.
+
+-   [Documentation](https://integrations.simplex.com/wallet-api-integration)
